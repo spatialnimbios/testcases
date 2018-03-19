@@ -2,6 +2,7 @@
 
 This test case examines the irreversible interaction between two, not necessarily identical, species. The 2D reversible binding test case assesses whether the simulation method depicts the proper kinetics and equilibrium for an irreversible reaction in two-dimensions.        
 
+<pre>
 Species and Diffusion Coefficients:
 A       1 nm^2.us-1
 B       1 nm^2.us-1
@@ -33,3 +34,4 @@ Cell Effective Radius - 0.080 um
 Time Step: 1e-7 s
 End Time: 1 s
 Number of Trajectories Averaged: 10
+</pre>
