@@ -31,9 +31,9 @@ The P_Aphos complex gives rise to P and A:
 
 ## Rate parameters
 
-|Parameter| Value | units)  |
+|Parameter| Value | units   |
 |-------|---------|---------|
-|   S   |   variable | 1/s  |
+|   S   |variable | 1/s  |
 | k_Aphos|  0.01  | µm<sup>3</sup>/s            |
 | k_f|  0.4 | µm<sup>3</sup>/s             |
 | k_r|  1.0 |1/s |
