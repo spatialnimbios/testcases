@@ -24,10 +24,11 @@ The P_Aphos complex gives rise to P and A:
 
 ## Initial concentrations
 
--------|-------------------
-Species|Number of Molecules
-   A   | 100
-   P   |  10
+
+|Species|Number of Molecules|
+|-------|-------------------|
+|   A   | 100               |
+|   P   |  10               | 
 
 
 
