@@ -2,6 +2,8 @@
 
 This is a simple model of an autophosphorylating kinase based on an early model of Lisman (1985).
 
+The model has two molecular entities: a kinase, A, and a phosphatase, P. P undergoes spontaneous phosphorylation at a rate *S*, phosphorylation by the phosphorylated form, Ap, and catalyzed dephosphorylation by the phosphatase P. There are initially 100 copies of A and 10 copies of P, and no Ap is present.
+
     A -> Ap S
     K1(Y~0) + K1(Y~P) -> K1(Y~P) + K1(Y~P) 0.01
     K1(Y~P) + P(b) <-> K1(Y~P!1).P(b!1) 0.4, 1 
