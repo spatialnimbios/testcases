@@ -1,6 +1,6 @@
 # Irreversible Binding 2D
 
-This test case examines the irreversible interaction between two, not necessarily identical, species. The 2D reversible binding test case assesses whether the simulation method depicts the proper kinetics and equilibrium for an irreversible reaction in two-dimensions.        
+This test case examines the irreversible interaction between two, not necessarily identical, species. The 2D irreversible binding test case assesses whether the simulation method depicts the proper kinetics for an irreversible reaction in two-dimensions.        
 
 <pre>
 Species and Diffusion Coefficients:
