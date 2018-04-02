@@ -8,7 +8,7 @@
     1. 2D
     2. 3D
 3. Membrane Binding
-4. Reaction-diffusion in complex gemoetries
+4. Reaction-diffusion in complex geometries
 5. Crowding
 
 ## Intermediate
