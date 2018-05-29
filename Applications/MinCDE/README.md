@@ -13,14 +13,16 @@ SPECIES     Copy Numbers (from Shih et al 2002 EMBO J)	D. Coeff (um2.s-1)	Huang 
 
 3.3	EminDt  	0	        0um2.s-1		0
 
-4.4	E	        1400	    2.5um2.s-1	350 /um	
+4.4	E	        1400*	    2.5um2.s-1	350 homodimers/um	
 
 5.5	minDt	    0	        0um2.s-1		0
 
 
 Notes:
-1. minDD, minDT, and E are all cytosolic.
-2. minDt and EminDt are both on the membrane.
+1. *Huang et al note the E is only active as a homodimer, so observed copy numbers in a cell (1400) should be halved to capture the copy numbers of active species. Hence they use 350/um rather than 700. 
+
+2. minDD, minDT, and E are all cytosolic.
+3. minDt and EminDt are both on the membrane.
 
 GEOMETRY: 
 Cylinder. In Huang et al, no mention of spherical caps.
