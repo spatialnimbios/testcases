@@ -25,7 +25,7 @@ Notes:
 GEOMETRY: 
 Cylinder. In Huang et al, no mention of spherical caps.
 
-R=1um
+R=0.5um
 
 L=4um
 
