@@ -8,10 +8,15 @@ SPECIES     Copy Numbers (from Shih et al 2002 EMBO J)	D. Coeff (um2.s-1)	Huang 
 
 
 1.1	minDD	    0	        2.5um2.s-1  0
-2.2	minDT	    2000	    2.5um2.s-1	1000 /um	
+
+2.2	minDT	    2000	    2.5um2.s-1	1000 /um
+
 3.3	EminDt  	0	        0um2.s-1		0
+
 4.4	E	        1400	    2.5um2.s-1	350 /um	
+
 5.5	minDt	    0	        0um2.s-1		0
+
 
 Notes:
 1. minDD, minDT, and E are all cytosolic.
@@ -24,12 +29,19 @@ L=4um
 
 REACTIONS:
 	Reactions	Kon (s-1.uM-1)	Koff (s-1)	
+	
 1.1	minDD -> minDT	                      1 s-1	0	
+
 2.2	EminDt -> minDD + E	                  0.7 s-1	0	
+
 3.3	minDt + E -> EminDt	                  56.0 (s-1.uM-1)	0	
+
 4.4	minDT -> minDt	                      0.025 um.s-1	0	
+
 5.5	minDt + minDT -> 2 minDt	            0.903 (s-1.uM-1)	0	
+
 6.6	EminDt + minDT -> minDt + EminDt	    0.903 (s-1.uM-1)	0	
+
 
 
 NOTE FOR RXN 5: Here we produce two minDt molecules. The cytosolic minDT, collides with minDt on the membrane, and when it is successful, it turns into minDt, which is on the surface.
