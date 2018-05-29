@@ -24,10 +24,14 @@ Notes:
 
 GEOMETRY: 
 Cylinder. In Huang et al, no mention of spherical caps.
+
 R=1um
+
 L=4um
 
+
 REACTIONS:
+
 	Reactions	Kon (s-1.uM-1)	Koff (s-1)	
 	
 1.1	minDD -> minDT	                      1 s-1	0	
@@ -45,7 +49,9 @@ REACTIONS:
 
 
 NOTE FOR RXN 5: Here we produce two minDt molecules. The cytosolic minDT, collides with minDt on the membrane, and when it is successful, it turns into minDt, which is on the surface.
+
 NOTE FOR RXN 4: Units for VCELL 15.055 molecules/um2/s/uM
+
 
 
 
