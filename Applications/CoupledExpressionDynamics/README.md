@@ -40,5 +40,22 @@ Alternative systems:
 Oscillations are eliminated in deterministic simulations when protein R degradation is slowed from 0.2 to 0.05 s-1: Rxn #13, R→ NULL (0.05 s-1)
 
 
+RESULTS:
+For a Volume of 4.189um^3 (Sphere with R=1um), the ODE and PDE give identical results. The stochastic simulations (Gillespie) produce the same average trends in oscillations, results from 10 trajectories of 200s each.  
+Single particle: Smoldyn has only 1 trajectory so far of 100s. MCELL has 1 trajectory of 200s. 
+
+Statistics: Calculate the average time separation between maxima in A and R, and the lagtime between peaks in A and R.
+These were calculated in two ways. 
+1)Identifying peaks and then measuring the distance between them. Same for Lag-time.
+2) Using a discrete FFT, and using the maximum coefficient to idenify the wavelength of the peaks. The cross-correlation between the A and R time-series was used to identify the lag-time. For stochastic simulations, the median value from multiple trajectories was taken.
+            A wavelength  R wavelength  A-R lagtime (Cross-correlation)  
+1. ODE & PDE      25s           25s            6s      
+2. ODE & PDE      25s           25s            6.5s 
+1. SSA (1traj)         25.6s            25.6s   5.89s 
+2. SSA  (10 traj)       25.01s         25.01s.       6.6s
+1. Smoldyn  (1traj)   28s             28s          5.7s
+2. Smoldyn (1traj)    -               - 
+1. Mcell (1traj)      21.7           21.6           5.78
+2. Mcell  (1traj)     22.2           22.2           6.5
 
 References: Vilar, J. M.G. et al, Mechanisms of noise-resistance in genetic oscillators. PNAS, 99:5988-5992 (2002).
