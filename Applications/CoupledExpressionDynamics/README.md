@@ -58,4 +58,7 @@ These were calculated in two ways.
 1. Mcell (1traj)      21.7           21.6           5.78
 2. Mcell  (1traj)     22.2           22.2           6.5
 
+LOCALIZED PRIMERS:
+To introduce a spatial gradient in concentrations, the genes for A and R were both centered in a sphere of R=0.1um, again using a single molecule of each gene (New localized Conc.=0.3964uM). The genes were uniform in this subvolume, and no barrier to them existed. They could not diffuse, however. The results from the PDE are unchanged, indicating that the overall size of the cell (R=1um) is small enough that having to reach a specific point in the center of the cell to transcribe a gene does not affect the oscillations. 
+
 References: Vilar, J. M.G. et al, Mechanisms of noise-resistance in genetic oscillators. PNAS, 99:5988-5992 (2002).
