@@ -9,7 +9,7 @@ As expected for all model parameters, there is no difference between the ODE, PD
 For the single particle RD methods, there are theoretical results we expect for bimolecular association models, independent of the algorithm. In 3D, we expect the kinetics of association beyond short time-scales to be the same for all methods because theoretically, the macroscopic rate equation is the correct description of the approach to equilibrium (Mattis, Tauber) (exceptions for when A0=B0 (Tauber) can be only effectively observed with high numerical precision on statistics (Johnson and Yogurtcu)). At short-times, the kinetics of association is slightly faster for single-particle RD when microscopic rates control binding upon collision between particles, because even with uniform initial conditions, some pairs of particles will be closer together than others. Practically, however, this faster kinetics is only visible when binding is diffusion-controlled, meaning nearly all collisions between reactants result in a binding event. 
 
 # SPECIES
-1. A          D=50nm^2/us 
+1. A.           D=100nm^2/us 
 
 # Reactions
 Diffusion-Limited: 
@@ -35,6 +35,9 @@ For this diffusion controlled reaction, the single-particle simulations should h
 A+A->C
 
 If the reaction is rate-limited, or only weakly-diffusion influenced (smaller on rate), then over all time-scales, the results will converge, including all single-particle methods.
+
+# Species
+1. A D=50nm^2.us
 
 # Rate Limited Reaction
 A+A->C k_f=1 uM-1.s-1. k_r=0
