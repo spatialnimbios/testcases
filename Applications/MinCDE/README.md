@@ -7,23 +7,30 @@ In the Huang et al paper, there is no membrane diffusion.
 SPECIES     Copy Numbers (from Shih et al 2002 EMBO J)	D. Coeff (um2.s-1)	Huang et al paper copy numbers.	
 
 
-1.1	minDD	    0	        2.5um2.s-1  0
+1	minDD	    0	        2.5um2.s-1  0
 
-2.2	minDT	    2000	    2.5um2.s-1	1000 /um
+2	minDT	    2000	    2.5um2.s-1	1000 /um
 
-3.3	EminDt  	0	        0um2.s-1		0
+3	EminDt  	0	        0um2.s-1		0
 
-4.4	E	        1400* monomers	    2.5um2.s-1	350 homodimers/um	
+4	E	        1400* monomers	    2.5um2.s-1	350 homodimers/um	
 
-5.5	minDt	    0	        0um2.s-1		0
+5	minDt	    0	        0um2.s-1		0
 
 
 Actual Initial concentrations used: 
-minDD: 0
-minDT: 3uM
-EminDt: 0
-E: 1 uM
-minDt: 0
+
+1. minDD: 0
+
+2. minDT: 3uM
+
+3. EminDt: 0
+
+4. E: 1 uM
+
+5. minDt: 0
+
+If initial conc. of minDT and E is instead 1.2686uM and 0.444uM, the oscillations disappear!
 
 
 Notes:
