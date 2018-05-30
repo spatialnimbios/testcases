@@ -23,7 +23,7 @@ V=2E-4 um^3.
 Sphere with R=0.03628um or box with L=0.05849um
 
 # Simulation parameters
-Due to the relatively high density (16mM), a small time-step needs to be taken. Same dt used for all single-particle methods.
+Due to the relatively high density (16mM), a small time-step needs to be taken. Same dt used for all single-particle methods. This is relevant because the kinetics for Smoldyn is actually dependent on the time-step size.
 
 time-step: 1ns
 
