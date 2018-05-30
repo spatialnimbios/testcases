@@ -15,6 +15,10 @@ For the single particle RD methods, there are theoretical results we expect for 
 Diffusion-Limited: 
 A+A->C  k_f=756.635 uM-1.s-1. k_r=0
 
+Corresponds to k_on=4*pi*(2*100nm^2/us)*1nm
+For FPR, ka=infinity.
+
+
 # Initial Conditions
 A: Uniform, 16.6mM.   2000 copies 
 
