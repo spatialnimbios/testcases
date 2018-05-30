@@ -1,6 +1,6 @@
 # Min CDE
 
-Diffusion that is slow enough or occurs over large enough length scales can establish spatial gradients of concentrations and subsequent oscillations in space and time. By construction, these dynamics are lost in non-spatial models. In a simplified model of bacterial cell division, the MinD and MinE proteins (Huang et al, PNAS 2003) spatially control the location of cell division by creating an oscillating spatial gradient of both proteins in the cytosol and on the membrane. 
+Diffusion that is slow enough or occurs over large enough length scales, coupled with reactions, can establish spatial gradients of concentrations and subsequent oscillations in space and time. By construction, these dynamics are lost in non-spatial models. In a simplified model of bacterial cell division, the MinD and MinE proteins (Huang et al, PNAS 2003) spatially control the location of cell division by creating an oscillating spatial gradient of both proteins in the cytosol and on the membrane. 
 
 In the Huang et al paper, there is no membrane diffusion.	
 
