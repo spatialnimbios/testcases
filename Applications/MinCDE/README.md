@@ -13,13 +13,21 @@ SPECIES     Copy Numbers (from Shih et al 2002 EMBO J)	D. Coeff (um2.s-1)	Huang 
 
 3.3	EminDt  	0	        0um2.s-1		0
 
-4.4	E	        1400*	    2.5um2.s-1	350 homodimers/um	
+4.4	E	        1400* monomers	    2.5um2.s-1	350 homodimers/um	
 
 5.5	minDt	    0	        0um2.s-1		0
 
 
+Actual Initial concentrations used: 
+minDD: 0
+minDT: 3uM
+EminDt: 0
+E: 1 uM
+minDt: 0
+
+
 Notes:
-1. *Huang et al note the E is only active as a homodimer, so observed copy numbers in a cell (1400) should be halved to capture the copy numbers of active species. Hence they use 350/um rather than 700. 
+1. *Huang et al note the E is only active as a homodimer, so observed copy numbers in a cell (1400) should be halved to capture the copy numbers of active species. Hence they use 350/um rather than 700/um. 
 
 2. minDD, minDT, and E are all cytosolic.
 3. minDt and EminDt are both on the membrane.
