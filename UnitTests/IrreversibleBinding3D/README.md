@@ -22,6 +22,12 @@ A: Uniform, 16.6mM.   2000 copies
 V=2E-4 um^3.
 Sphere with R=0.03628um or box with L=0.05849um
 
+# Simulation parameters
+Due to the relatively high density (16mM), a small time-step needs to be taken. Same dt used for all single-particle methods.
+
+time-step: 1ns
+
+
 # Results
 For this diffusion controlled reaction, the single-particle simulations should have faster initial kinetics compared to the macroscopic rate methods (ODE, PDE, SSA).
 
@@ -38,5 +44,12 @@ A: Uniform, 10uM. 2000 copies
 V=0.3321 um^3
 Box with L=0.6925um
 Sphere with R=0.4296um
+
+# Simulation Parameters
+For this more standard physiologic concentration (10uM), a larger time-step can be used.
+
+time-step: 0.1us
+
+
 # Results
 All simulations produce same kinetics.
