@@ -40,7 +40,7 @@ Notes:
 3. minDt and EminDt are both on the membrane.
 
 GEOMETRY: 
-Cylinder. In Huang et al, no mention of spherical caps.
+Cylinder. In Huang et al, They do not use spherical caps on the ends of the cylinder.
 
 R=0.5um
 
