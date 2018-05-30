@@ -13,10 +13,10 @@ For the single particle RD methods, there are theoretical results we expect for 
 
 # Reactions
 Diffusion-Limited: 
-A+A->C  k_f=756.635 uM-1.s-1. k_r=0
+A+A->C  k_on=756.635 uM-1.s-1. k_off=0
 
-Corresponds to k_on=4*pi*(2*100nm^2/us)*1nm
-For FPR, ka=infinity.
+Corresponds to k_on=4.pi.(2.100nm^2/us).1nm
+For FPR, k_a=infinity.
 
 
 # Initial Conditions
@@ -44,7 +44,10 @@ If the reaction is rate-limited, or only weakly-diffusion influenced (smaller on
 1. A D=50nm^2.us
 
 # Rate Limited Reaction
-A+A->C k_f=1 uM-1.s-1. k_r=0
+A+A->C k_on=1 uM-1.s-1. k_off=0
+
+For FPR, use intrinsic rate k_a=3.33 nm^3/us to get 2k_on=3.321 nm^3/us
+
 # Rate limited Initial Conditions
 A: Uniform, 10uM. 2000 copies
 # Geometry
