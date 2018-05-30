@@ -47,16 +47,16 @@ Single particle: Smoldyn has only 1 trajectory so far of 100s. MCELL has 1 traje
 Statistics: Calculate the average time separation between maxima in A and R, and the lagtime between peaks in A and R.
 These were calculated in two ways. 
 1)Identifying peaks and then measuring the distance between them. Same for Lag-time.
-2) Using a discrete FFT, and using the maximum coefficient to idenify the wavelength of the peaks. The cross-correlation between the A and R time-series was used to identify the lag-time. For stochastic simulations, the median value from multiple trajectories was taken.
+2) Using a discrete FFT, and using the maximum coefficient to idenify the wavelength of the peaks. The cross-correlation between the A and R time-series was used to identify the lag-time. For stochastic simulations, the mode value from multiple trajectories was taken.
             A wavelength  R wavelength  A-R lagtime (Cross-correlation)  
-1. ODE & PDE      25s           25s            6s      
-2. ODE & PDE      25s           25s            6.5s 
-1. SSA (1traj)         25.6s            25.6s   5.89s 
-2. SSA  (10 traj)       25.01s         25.01s.       6.6s
+1. ODE & PDE (1 traj, 8 peaks)     25.2s (std:0.4)           25.1s  (std: 0.2)           6s (std 0.27)     
+2. ODE & PDE   FFT Mode (1 traj, 8peaks)   25s           25s            6.5s 
+1. SSA (10 traj: 74 and 72 peaks)         25s (std: 3.6)            25s (std:3.7)  5.98s (std 0.7) 
+2. SSA  (10 traj) FFT Mode      25.01s         25.01s.       6.6s
 1. Smoldyn  (1traj)   28s             28s          5.7s
-2. Smoldyn (1traj)    -               - 
+2. Smoldyn (1traj) FFT     -               - 
 1. Mcell (1traj)      21.7           21.6           5.78
-2. Mcell  (1traj)     22.2           22.2           6.5
+2. Mcell  (1traj) FFT    22.2           22.2           6.5
 
 LOCALIZED PRIMERS:
 To introduce a spatial gradient in concentrations, the genes for A and R were both centered in a sphere of R=0.1um, again using a single molecule of each gene (New localized Conc.=0.3964uM). The genes were uniform in this subvolume, and no barrier to them existed. They could not diffuse, however. The results from the PDE are unchanged, indicating that the overall size of the cell (R=1um) is small enough that having to reach a specific point in the center of the cell to transcribe a gene does not affect the oscillations. 
