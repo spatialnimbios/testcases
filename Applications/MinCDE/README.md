@@ -4,19 +4,21 @@ Diffusion that is slow enough or occurs over large enough length scales can esta
 
 In the Huang et al paper, there is no membrane diffusion.	
 
-# SPECIES     Copy Numbers (from Shih et al 2002 EMBO J)	D. Coeff (um2.s-1)	Huang et al paper copy numbers.	
+# SPECIES     	
+D. Coeff (um2.s-1)	Huang paper Copy Numbers/um (?).	
 
 
-1	minDD	    0	        2.5um2.s-1  0
+1	minDD	      	  2.5 um2.s-1  		0
 
-2	minDT	    2000	    2.5um2.s-1	1000 /um
+2	minDT	     	   2.5 um2.s-1		1000 /um
 
-3	EminDt  	0	        0um2.s-1		0
+3	EminDt  	    0 um2.s-1		0
 
-4	E	        1400* monomers	    2.5um2.s-1	350 homodimers/um	
+4	E	           2.5 um2.s-1		350 homodimers/um	
 
-5	minDt	    0	        0um2.s-1		0
+5	minDt	   	   0 um2.s-1		0
 
+Copy Numbers (from Shih et al 2002 EMBO J) have minDT=2000 proteins, and E=1400 monomers. Since E is active as a homodimer (Huang et al), the simulated copy numbers would then be 700. The ratio of minDT:E is then 2.857.
 
 # Actual Initial concentrations used that maintain the same ratio of 1000:350 minDT:E. 
 Within the cylinder used (h=4um, R=0.5um), this corresponds to 4730 copies of minDT and 1655 copies of E. 
@@ -31,7 +33,7 @@ Within the cylinder used (h=4um, R=0.5um), this corresponds to 4730 copies of mi
 
 5. minDt: 0
 
-If initial conc. of minDT and E is instead 1.2686uM and 0.444uM, the oscillations disappear!
+*If initial conc. of minDT and E is instead 1.2686uM and 0.444uM, the oscillations disappear!!
 
 
 # Notes:
