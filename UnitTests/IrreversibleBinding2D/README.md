@@ -51,6 +51,10 @@ A + B -> C   k_on=0.816 um^2.s-1. k_off=0
 
 For FPR intrinsic k_a=1 um^2.s-1
 
+RESULTS:
+Smoldyn is far off, and a newer version of the software needs to be checked. 
+MCell is also off for the diffusion-controlled system (higher k_on).
+
 References: Yogurtcu, O.N. and Johnson, M.E. Theory of bi-molecular association dynamics in 2D for accurate model and experimental parameterization of binding rates, J Chem Phys. 143:084117 (2015).
 
 </pre>
