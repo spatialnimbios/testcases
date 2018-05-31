@@ -11,9 +11,16 @@ C       0.5 nm^2.us-1
 Initial Conditions (Species, Number of Molecules):
 A       1000 molecules
 B       1000 molecules
+C       0 molecules
 
 Reaction (Equation, Kf, Kr):
-A + B -> C   1 and 10 um^2.s-1    
+A + B -> C   k_on=4.2495 um^2.s-1. k_off=0
+
+For FPR intrinsic k_a=100 um^2.s-1
+
+Geometry:
+Surface Area= 1um^2
+
 
 MCell Parameters
 Geometry:
@@ -34,4 +41,7 @@ Cell Effective Radius - 0.080 um
 Time Step: 1e-7 s
 End Time: 1 s
 Number of Trajectories Averaged: 10
+
+FPR Time step: 1e-7s
+
 </pre>
