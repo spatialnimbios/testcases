@@ -18,6 +18,8 @@ A + B -> C   k_on=4.2495 um^2.s-1. k_off=0
 
 For FPR intrinsic k_a=100 um^2.s-1
 
+Equation for converting between the macroscopic k_on2D and microscopic k_a2D is in Yogurtcu et al, 2015. Attached in matlab kon2D_value.m
+
 Geometry:
 Surface Area= 1um^2
 
@@ -43,5 +45,12 @@ End Time: 1 s
 Number of Trajectories Averaged: 10
 
 FPR Time step: 1e-7s
+
+MORE RATE-LIMITED REACTION
+A + B -> C   k_on=0.816 um^2.s-1. k_off=0
+
+For FPR intrinsic k_a=1 um^2.s-1
+
+References: Yogurtcu, O.N. and Johnson, M.E. Theory of bi-molecular association dynamics in 2D for accurate model and experimental parameterization of binding rates, J Chem Phys. 143:084117 (2015).
 
 </pre>
