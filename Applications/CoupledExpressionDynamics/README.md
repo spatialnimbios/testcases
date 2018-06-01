@@ -53,8 +53,8 @@ These were calculated in two ways.
 2. ODE & PDE   FFT Mode (1 traj, 8peaks)   25s           25s            6.5s 
 1. SSA (10 traj: 74 and 72 peaks)         25s (std: 3.6)            25s (std:3.7)  5.98s (std 0.7) 
 2. SSA  (10 traj) FFT Mode      25.01s         25.01s.       6.6s
-1. Smoldyn  (1traj)   25.8s             25.s          5.7s
-2. Smoldyn (1traj) FFT     -               - 
+1. Smoldyn  (1traj)   25.9s             25.6s          5.62s
+2. Smoldyn (1traj) FFT     25s             25s              6s 
 1. Mcell (1traj)      21.7           21.6           5.78
 2. Mcell  (1traj) FFT    22.2           22.2           6.5
 
