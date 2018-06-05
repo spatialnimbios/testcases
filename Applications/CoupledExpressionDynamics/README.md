@@ -40,25 +40,49 @@ Alternative systems:
 Oscillations are eliminated in deterministic simulations when protein R degradation is slowed from 0.2 to 0.05 s-1: Rxn #13, R→ NULL (0.05 s-1)
 
 
-RESULTS:
+# RESULTS:
 For a Volume of 4.189um^3 (Sphere with R=1um), the ODE and PDE give identical results. The stochastic simulations (Gillespie) produce the same average trends in oscillations, results from 10 trajectories of 200s each.  
-Single particle: Smoldyn has only 1 trajectory so far of 100s. MCELL has 1 trajectory of 200s. 
+Single particle: Smoldyn also produces very similar results to the Gillespie, given a single 200s trajectory.
+However, MCELL has distinct statistics that are not huge, but are of significance. Also data is from1 trajectory of 200s. 
 
-Statistics: Calculate the average time separation between maxima in A and R, and the lagtime between peaks in A and R.
+# Statistics: 
+Calculate the average time separation between maxima in A and R, and the lagtime between peaks in A and R.
 These were calculated in two ways. 
-1)Identifying peaks and then measuring the distance between them. Same for Lag-time.
-2) Using a discrete FFT, and using the maximum coefficient to idenify the wavelength of the peaks. The cross-correlation between the A and R time-series was used to identify the lag-time. For stochastic simulations, the mode value from multiple trajectories was taken.
+1)Identifying peaks and then measuring the distance between them. Same for Lag-time. MATLAB PROGRAM: calc_peak_seps.m
+2) Using a discrete FFT, and using the maximum coefficient to idenify the wavelength of the peaks. The cross-correlation between the A and R time-series was used to identify the lag-time. For stochastic simulations, the mode value from multiple trajectories was taken. MATLAB PROGRAM: findpeaksfftSTOCH.m --works for any simulation type.
+# Table
             A wavelength  R wavelength  A-R lagtime (Cross-correlation)  
 1. ODE & PDE (1 traj, 8 peaks)     25.2s (std:0.4)           25.1s  (std: 0.2)           6s (std 0.27)     
 2. ODE & PDE   FFT Mode (1 traj, 8peaks)   25s           25s            6.5s 
 1. SSA (10 traj: 74 and 72 peaks)         25s (std: 3.6)            25s (std:3.7)  5.98s (std 0.7) 
 2. SSA  (10 traj) FFT Mode      25.01s         25.01s.       6.6s
-1. Smoldyn  (1traj)   25.9s             25.6s          5.62s
+1. Smoldyn  (1traj)   25.9s   (std: 3.7)          25.6s (std:3.7)         5.62s (std: 0.74)
 2. Smoldyn (1traj) FFT     25s             25s              6s 
-1. Mcell (1traj)      21.7           21.6           5.78
+1. Mcell (1traj)      21.7     (std:1.9)      21.6  (std:1.8)         5.78 (std:1.1)
 2. Mcell  (1traj) FFT    22.2           22.2           6.5
 
-LOCALIZED PRIMERS:
-To introduce a spatial gradient in concentrations, the genes for A and R were both centered in a sphere of R=0.1um, again using a single molecule of each gene (New localized Conc.=0.3964uM). The genes were uniform in this subvolume, and no barrier to them existed. They could not diffuse, however. The results from the PDE are unchanged, indicating that the overall size of the cell (R=1um) is small enough that having to reach a specific point in the center of the cell to transcribe a gene does not affect the oscillations. 
+# LOCALIZED PRIMERS:
+To introduce a spatial gradient in concentrations, 
+# geometry:
+the genes for A and R were both centered in a sphere of R=0.1um, still with a single molecule of each
+# initial conc.
+prmA = 1 molecule, New localized Conc.=0.3964uM
+prmR = 1 molecule, New Localized Conc.=0.3964uM
+
+# diffusion
+The genes were uniform in this subvolume, and no barrier to them existed. 
+prmA: D=0.0um^2/s
+prmA_bound:D=0.0um^2/s
+prmR: D=0.0um^2/s
+prmR_bound: D=0.0um^2/s
+
+They could not diffuse, however. 
+# results
+The results from the PDE are essentialy unchanged. There is a very small decrease in the height of the A and R oscillations, but it could probably be attributed to the numerical issues associatied with the coarse mesh (~0.1um). The difference between the copies of A or R proteins in the center, versus on the periphery, are barely distinguishable, see Figure: AR_oscillations_vsTime_PDE_centeredGenes.eps
+
+Smoldyn was set up for this geometry, but it did not work!
+
+# conclusion
+The overall size of the cell (R=1um) is small enough that having to reach a specific point in the center of the cell to transcribe a gene does not affect the oscillations. 
 
 References: Vilar, J. M.G. et al, Mechanisms of noise-resistance in genetic oscillators. PNAS, 99:5988-5992 (2002).
