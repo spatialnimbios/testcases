@@ -24,6 +24,7 @@ Copy Numbers (from Shih et al 2002 EMBO J) have minDT=2000 proteins, and E=1400 
 Within the cylinder used (h=4um, R=0.5um), we simulated 4730 copies of minDT and 1655 copies of E. 
 For Virtual Cell, both minDT and E were initially uniform throughout the Volume. This is the simplest initialization, although it is not what Huang et al did: In Huang et al, in Figure 2, there is a spatial gradient even at time zero. In Kerr et al, PNAS 2006 (MCell), the also initialized with a gradient. 
 Both of those simulations used 4000 minDT and 1400 E, which is 2.1143uM and 0.74uM, respectively. 
+Kerr et al also used the 1000:350 ratio, and a 4:1 ratio. 
 
 1. minDD: 0
 
@@ -75,7 +76,9 @@ NOTE FOR RXN 5: Here we produce two minDt molecules. The cytosolic minDT, collid
 NOTE FOR RXN 4: Units for VCELL 15.055 molecules/um2/s/uM
 
 
+# SMOLDYN:
 
+Using the model specified above, Smoldyn shows temporal oscillations of minDt and EminDt, but they are noisy and do not correspond to anti-correlated oscillations from one end of the cylinder relative to the middle. Even for 400s. Adding membrane diffusion seems to help, or a non-uniform initial condition. In the PDE, the oscillations are symmetric for the first ~250s before they become unstable and revert to the pole-to-pole oscillations seen exclusively in Huang et al and Kerr et al. 
 
 
 # REFERENCES
