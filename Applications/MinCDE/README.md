@@ -21,7 +21,9 @@ D. Coeff (um2.s-1)	Huang paper Copy Numbers/um (?).
 Copy Numbers (from Shih et al 2002 EMBO J) have minDT=2000 proteins, and E=1400 monomers. Since E is active as a homodimer (Huang et al), the simulated copy numbers would then be 700. The ratio of minDT:E is then 2.857.
 
 # Actual Initial concentrations used that maintain the same ratio of 1000:350 minDT:E. 
-Within the cylinder used (h=4um, R=0.5um), this corresponds to 4730 copies of minDT and 1655 copies of E. 
+Within the cylinder used (h=4um, R=0.5um), we simulated 4730 copies of minDT and 1655 copies of E. 
+For Virtual Cell, both minDT and E were initially uniform throughout the Volume. This is the simplest initialization, although it is not what Huang et al did: In Huang et al, in Figure 2, there is a spatial gradient even at time zero. In Kerr et al, PNAS 2006 (MCell), the also initialized with a gradient. 
+Both of those simulations used 4000 minDT and 1400 E, which is 2.1143uM and 0.74uM, respectively. 
 
 1. minDD: 0
 
@@ -78,3 +80,4 @@ NOTE FOR RXN 4: Units for VCELL 15.055 molecules/um2/s/uM
 
 # REFERENCES
 Huang, K.C. et al, Dynamic structures in Escherichia coli: Spontaneous formation of MinE rings and MinD polar zones, PNAS, 100:12724-12728 (2003).
+Kerr, R.A. et al, Division accuracty in a stochastic Min Model, PNAS, (2006).
