@@ -4,4 +4,15 @@ In a crowded environment often macromolecular species influence other proteins' 
 
 All simulations are executed in a box of 50 * 50 * 50 nm with periodic boundary conditions. The solely reaction is A+B->B+C, all particles have a radius of 0.5 nm, and a diffusion coefficient of 10 nm²/µs. The simulation starts with 1000 A and B, and a number of C that is calculated depending on the crowding degree. Please note that depending on the realization of excluded volumes the max. degree of crowding that can be realized varies. For example in Smoldyn experiments have been run with close to 100% crowding (see Dagstuhl report), whereas based on non-overlapping spheres the highest density is around 74%. In our approach, we only considered crowding of up to 20% in 5% steps. 10 replications were run. In the nearly diffusion limited case each collision resulted in a reaction, whereas for the activation limited case we assumed that 20% of collisions lead to a reaction.  
 
-In our experiments with eGFRD we used a box that is 10 times smaller, with 10 times less particles to keep the concentration. We did only 5 replications. The intrinsic rate is 85 nm^3/us. 
+Experiment setting for eGFRD (scaled down): 
+
+All simulations were performed in a box of the size (23.21nm)^3 = (50nm * 10^(-1/3))^3.
+The particles A, B and C have a radius of 0.5 nm and a diffusion coefficient of 10^-11 m^2/s. The first reaction rule is
+
+A+B -> A-B @ ki = 85*10^-21 m^3/s
+
+where ki is the intrinsic rate. A and B form the complex A-B (r = 0.5 nm, D = 0), because eGFRD only allows one product in a bimolecular reaction. Hence we need a second reaction rule.
+
+A-B -> B + C @ k = inf
+
+Since the rate k is infinity (those are possible for unary reactions), the complex A-B decays after a short time (it looks like A-B exists only for a few ns at most). The simulation starts with 100 A and 100 B particles. The number of C particles is chosen in a way, that A+B+C fill x % of the box (crowding factor). 
