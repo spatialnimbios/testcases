@@ -1,7 +1,7 @@
 # Intermediate models
 
-1. Transcriptional bursting
-2. Autophosphorylation
-3. Multisite phosphorylation
-4. Membrane Localization
+1. Transcriptional bursting--DONT DO
+2. Autophosphorylation--MAYBE
+3. Multisite phosphorylation--DONT DO
+4. Membrane Localization--UPLOAD DATA
 
