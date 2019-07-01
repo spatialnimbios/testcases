@@ -1,4 +1,4 @@
-#Copy Numbers
+# Copy Numbers
 P1: 1 uM
 P2: 1 uM
 M: 17000 molec/um^2
@@ -9,7 +9,7 @@ P1P2M: 0
 P2P1M: 0
 MP1P2M:0	
 
-#Diffusion Coefficients
+# Diffusion Coefficients
 P1: 50	
 P2: 50	
 M: 0.5	
@@ -20,11 +20,11 @@ P1P2M: 0.2488
 P2P1M: 0.2488	
 MP1P2M: 0.2475	
 
-#System Dimensions
+# System Dimensions
 Box: 0.47x0.47x0.76 um
 Sphere: R=2.2854um
 
-#Reactions
+# Reactions
 				
 Reactions		k_a,FPR	     k_on	        k_b,FPR	              k_off
 P1 + P2 <-> P1P2		16.828 nm^3/us	10.0 uM-1s-1	1.0100 s-1	1.0 s-1
