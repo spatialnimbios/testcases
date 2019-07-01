@@ -38,3 +38,8 @@ P1M + P2M <-> MP1P2M		-	8.3056 um^2/s	-	1.0 s-1
 P1P2M + M <-> MP1P2M		-	1.6611 um^2/s	-	1.0 s-1
 P2P1M + M <-> M P1P2M		-	1.6611 um^2/s	-	1.0 s-1
 
+# Results
+The relative SA to Volume is a critical parameter for determining the equilibrium populations. It also influences the kinetics, but for kinetics, results are also sensitive to the geometry--whether it is a box with a surface on one side, or a sphere surrounded by membrane.
+As thte distance to the membrane grows, the spatial models start to produce slower kinetics than well-mixed systems, particularly when the reaction with the surface is diffusion-limited (most collisions result in binding). 
+
+FPR, ODE, PDE, produce the same equilibrium. Smoldyn was slightly off-we will rerun with the new software.
