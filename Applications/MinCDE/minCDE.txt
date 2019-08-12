@@ -87,7 +87,7 @@ surface_mol 2000 minDt(front) membrane disk disk1
 # the output file needs to be created before the simulation
 text_display time minDD minDt EminDt(front) E	# displays species counts to graphics
 ifdefine TEXTOUTPUT				# only run this if needed
-  output_files results\run2_2\minCDE_pos_EminDt.txt results\run2_2\minCDE_pos_minDD.txt results\run2_2\minCDE_pos_minDt_s.txt results\run2_2\minCDE_pos_minDt_f.txt results\run2_2\minCDE_pos_E.txt	 		# file names for text output
+  output_files results\run_x\minCDE_pos_EminDt.txt results\run_x\minCDE_pos_minDD.txt results\run_x\minCDE_pos_minDt_s.txt results\run_x\minCDE_pos_minDt_f.txt results\run_x\minCDE_pos_E.txt	 		# file names for text output
   cmd i 0 400 1 molpos EminDt(front) results\run_x\minCDE_pos_EminDt.txt
   cmd i 0 400 1 molpos minDD(fsoln) results\run_x\minCDE_pos_minDD.txt
   cmd i 0 400 1 molpos minDt(fsoln) results\run_x\minCDE_pos_minDt_s.txt
