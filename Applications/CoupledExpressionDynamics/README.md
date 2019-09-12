@@ -42,8 +42,8 @@ Oscillations are eliminated in deterministic simulations when protein R degradat
 
 # RESULTS:
 For a Volume of 4.189um^3 (Sphere with R=1um), the ODE and PDE give identical results. The stochastic simulations (Gillespie) produce the same average trends in oscillations, results from 10 trajectories of 200s each.  
-Single particle: Smoldyn also produces very similar results to the Gillespie, given a single 200s trajectory.
-However, MCELL has distinct statistics that are not huge, but are of significance. Also data is from1 trajectory of 200s. 
+Single particle: FPR is very similar to the non-spatial, except slightly shorter time oscillations, with a very similar lag-time. Smoldyn has slightly longer oscillations than FPR and the non-spatial simulators, with a slightly shorter lag-time. 
+However, MCELL has distinctly shorter oscillations (of significance), but with a similar lag-time.  
 
 # Statistics: 
 Calculate the average time separation between maxima in A and R, and the lagtime between peaks in A and R.
@@ -53,15 +53,15 @@ These were calculated in two ways.
 # Table
             A wavelength  R wavelength  A-R lagtime (Cross-correlation)  
 1. ODE & PDE (1 traj, 8 peaks)     25.2s (std:0.4)           25.1s  (std: 0.2)           6s (std 0.27)     
-2. ODE & PDE   FFT Mode (1 traj, 8peaks)   25s           25s            6.5s 
-1. SSA (10 traj: 74 and 72 peaks)         25s (std: 3.6)            25s (std:3.7)  5.98s (std 0.7) 
-2. SSA  (10 traj) FFT Mode      25.01s         25.01s.       6.6s
+2. ODE & PDE   FFT Mode (1 traj, 8peaks, 200s+zeropad to 5000s)   25.12s           25.12s            6.55s 
+1. SSA (10 traj: 74 and 72 peaks)         25s (std: 3.6)            25s (std:3.5)  5.98s (std 0.7) 
+2. SSA  (10 traj, 200s +zeropad to 5000s) FFT Mode      24.8s         25.1s.       6.63s 
 1. Smoldyn  (1traj)   25.9s   (std: 3.7)          25.6s (std:3.7)         5.62s (std: 0.74)
-2. Smoldyn (1traj) FFT     25s             25s              6s 
-1. Mcell (1traj)      21.7     (std:1.9)      21.6  (std:1.8)         5.78 (std:1.1)
-2. Mcell  (1traj) FFT    22.2           22.2           6.5
+2. Smoldyn (1traj, 200s + zeropad to 5000s) FFT     26.6s             26.3s              6.3s 
+1. Mcell (1traj)      21.75     (std:1.9)      21.6  (std:1.8)         5.89 (std:1.1)
+2. Mcell  (1traj, 200s + zeropad to 5000s) FFT    21.8           21.8          6.64s
 1. FPR (t traj, 9 peaks) 23.9s (std:2.15)    23.8s (std: 2.5)    5.9s (std:0.8)
-2. FPR (1traj) FFT  25s             25s                     6.45s
+2. FPR (1traj, 200s+zeropad to 5000s) FFT  24.5s             24.75s                     6.45s
 
 
 
