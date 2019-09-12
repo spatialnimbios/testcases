@@ -60,6 +60,10 @@ These were calculated in two ways.
 2. Smoldyn (1traj) FFT     25s             25s              6s 
 1. Mcell (1traj)      21.7     (std:1.9)      21.6  (std:1.8)         5.78 (std:1.1)
 2. Mcell  (1traj) FFT    22.2           22.2           6.5
+1. FPR (t traj, 9 peaks) 23.9s (std:2.15)    23.8s (std: 2.5)    5.9s (std:0.8)
+2. FPR (1traj) FFT  25s             25s                     6.45s
+
+
 
 # LOCALIZED PRIMERS:
 To introduce a spatial gradient in concentrations, 
