@@ -30,9 +30,9 @@ time_step 0.002			# simulation time step [s]
 species minDD minDt E EminDt		# species.
 difc minDD 2.5			# diffusion coefficients [µm²/s]
 difc minDt(fsoln) 2.5
-difc minDt(front) 0.1
+difc minDt(front) 0.05
 difc E 2.5
-difc EminDt 0.1
+difc EminDt(front) 0.05
 
 color minDD(all) green		# colors for graphical output
 color minDt(front) black
@@ -81,20 +81,20 @@ product_placement r6 unbindrad UNBINDRAD
 compartment_mol 1400 E inside					# puts E molecules in the compartment
 compartment_mol 2000 minDt(fsoln) inside		# puts minDt molecules in the compartment
 surface_mol 2000 minDt(front) membrane disk disk1
+# surface_mol 1500 minDt(front) membrane disk disk2
 
 
 # Output and other run-time commands
 # the output file needs to be created before the simulation
 text_display time minDD minDt EminDt(front) E	# displays species counts to graphics
 ifdefine TEXTOUTPUT				# only run this if needed
-  output_files results\run_x\minCDE_pos_EminDt.txt results\run_x\minCDE_pos_minDD.txt results\run_x\minCDE_pos_minDt_s.txt results\run_x\minCDE_pos_minDt_f.txt results\run_x\minCDE_pos_E.txt	 		# file names for text output
-  cmd i 0 400 1 molpos EminDt(front) results\run_x\minCDE_pos_EminDt.txt
-  cmd i 0 400 1 molpos minDD(fsoln) results\run_x\minCDE_pos_minDD.txt
-  cmd i 0 400 1 molpos minDt(fsoln) results\run_x\minCDE_pos_minDt_s.txt
-  cmd i 0 400 1 molpos minDt(front) results\run_x\minCDE_pos_minDt_f.txt
-  cmd i 0 400 1 molpos E(fsoln) results\run_x\minCDE_pos_E.txt
-  #cmd E molcountspace EminDt(front) z -2.0001 2.0001 10 -1 1 -1 1 0 minCDEout_run2_2_2.txt
+  output_files results\run5_rep4\minCDE_pos_EminDt.txt results\run5_rep4\minCDE_pos_minDD.txt results\run5_rep4\minCDE_pos_minDt_s.txt results\run5_rep4\minCDE_pos_minDt_f.txt results\run5_rep4\minCDE_pos_E.txt	 		# file names for text output
+  cmd i 0 400 1 molpos EminDt(front) results\run5_rep4\minCDE_pos_EminDt.txt
+  cmd i 0 400 1 molpos minDD(fsoln) results\run5_rep4\minCDE_pos_minDD.txt
+  cmd i 0 400 1 molpos minDt(fsoln) results\run5_rep4\minCDE_pos_minDt_s.txt
+  cmd i 0 400 1 molpos minDt(front) results\run5_rep4\minCDE_pos_minDt_f.txt
+  cmd i 0 400 1 molpos E(fsoln) results\run5_rep4\minCDE_pos_E.txt
+  #cmd E molcountspace EminDt(front) z -2.0001 2.0001 10 -1 1 -1 1 0 minCDEout_run5_rep4_2.txt
 endif
 
 end_file			# end of this file
-
