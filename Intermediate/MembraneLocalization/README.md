@@ -21,7 +21,7 @@ P2P1M: 0.2488
 MP1P2M: 0.2475  
 
 # System Dimensions
-Box: 0.47x0.47x0.76 um  
+Box: 0.47x0.47x0.752 um  
 Sphere: R=2.2854um
 
 # Reactions
