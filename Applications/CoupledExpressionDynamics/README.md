@@ -51,17 +51,18 @@ These were calculated in two ways.
 1)Identifying peaks and then measuring the distance between them. Same for Lag-time. MATLAB PROGRAM: calc_peak_seps.m
 2) Using a discrete FFT, and using the maximum coefficient to idenify the wavelength of the peaks. The cross-correlation between the A and R time-series was used to identify the lag-time. For stochastic simulations, the mode value from multiple trajectories was taken. MATLAB PROGRAM: findpeaksfftSTOCH.m --works for any simulation type.
 # Table
-            A wavelength  R wavelength  A-R lagtime (Cross-correlation)  
-1. ODE & PDE (1 traj, 8 peaks)     25.2s (std:0.4)           25.1s  (std: 0.2)           6s (std 0.27)     
-2. ODE & PDE   FFT Mode (1 traj, 8peaks, 200s+zeropad to 5000s)   25.12s           25.12s            6.55s 
-1. SSA (10 traj: 74 and 72 peaks)         25s (std: 3.6)            25s (std:3.5)  5.98s (std 0.7) 
-2. SSA  (10 traj, 200s +zeropad to 5000s) FFT Mode      24.8s         25.1s.       6.63s 
-1. Smoldyn  (1traj)   25.9s   (std: 3.7)          25.6s (std:3.7)         5.62s (std: 0.74)
-2. Smoldyn (1traj, 200s + zeropad to 5000s) FFT     26.6s             26.3s              6.3s 
-1. Mcell (1traj)      21.75     (std:1.9)      21.6  (std:1.8)         5.89 (std:1.1)
-2. Mcell  (1traj, 200s + zeropad to 5000s) FFT    21.8           21.8          6.64s
-1. FPR (t traj, 9 peaks) 23.9s (std:2.15)    23.8s (std: 2.5)    5.9s (std:0.8)
-2. FPR (1traj, 200s+zeropad to 5000s) FFT  24.5s             24.75s                     6.45s
+|  | A wavelength | R wavelength | A-R lagtime (Cross-correlation) |
+|---|---|---|---|
+|1. ODE & PDE (1 traj, 8 peaks) | 25.2s (std:0.4) | 25.1s  (std:0.2) | 6s (std:0.27) |
+|2. ODE & PDE FFT Mode <br> (1 traj, 8peaks, 200s+zeropad to 5000s) | 25.12s | 25.12s | 6.55s |
+|1. SSA (10 traj: 74 and 72 peaks) | 25s (std:3.6) | 25s (std:3.5) | 5.98s (std:0.7) | 
+|2. SSA  (10 traj, 200s +zeropad to 5000s) FFT Mode | 24.8s | 25.1s | 6.63s | 
+|1. Smoldyn  (1traj) | 25.9s   (std:3.7) | 25.6s (std:3.7) | 5.62s (std:0.74) | 
+|2. Smoldyn (1traj, 200s + zeropad to 5000s) FFT | 26.6s | 26.3s | 6.3s | 
+|1. Mcell (1traj) | 21.75s (std:1.9) | 21.6s (std:1.8) | 5.89s (std:1.1) | 
+|2. Mcell  (1traj, 200s + zeropad to 5000s) FFT | 21.8s | 21.8s | 6.64ss | 
+|1. FPR (t traj, 9 peaks) | 23.9s (std:2.15) | 23.8s (std:2.5) | 5.9s (std:0.8) | 
+|2. FPR (1traj, 200s+zeropad to 5000s) FFT | 24.5s | 24.75s | 6.45s | 
 
 
 
