@@ -39,6 +39,7 @@ plt.gcf().set_size_inches(default_x, default_y)
 
 plt.rcParams.update({'font.size': 14})
 
+#%%
 ########## Plot crowding 1 ##########
 
 egfre_crowding1 = np.loadtxt('kfiitvals_vs_C_vsSEM_eGFRD.dat', skiprows=0)
@@ -63,7 +64,7 @@ plt.savefig("crowding_C.pdf",bbox_inches='tight', dpi = 400)
 
 
 
-#%%
+
 ########## Plot crowding 2 ##########
 egfrd_crowding2 = np.loadtxt('GFRD_C0_time_vs_AvgOve10_vs_STDEV.dat', skiprows=0)
 egfrd_crowding2[:,2] /= np.sqrt(10)
@@ -83,7 +84,7 @@ ax.fill_between(egfrd_crowding2[:,0]*1e6, egfrd_crowding2[:,1]+egfrd_crowding2[:
 plt.plot([], [], ' ', label="Fit")
 ax.plot(fpr_crowding2[:,0]*1e6, fpr_fit, linestyle=linestyles['dashed'], label = 'FPR', color='blue')
 ax.plot(egfrd_crowding2[:,0]*1e6, egfrd_fit, linestyle=linestyles['densely dotted'], label = 'eGFRD', color = 'red')
-ax.text(4, 50, r'$\phi$ = 0.0', fontsize = 18)
+ax.text(4, 50, r'$\phi$ = 0.008', fontsize = 18)
 
 ax.set_xlim(0, 12)
 ax.set_ylim(1e-1, 1e2)
