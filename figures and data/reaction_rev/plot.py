@@ -86,7 +86,7 @@ fpr2 = np.loadtxt('ReversibleBinding2D/FPR_mean5traj_rev2d.dat', skiprows = 1)
 #mcell2 = sio.loadmat('ReversibleBinding2D/GRAPH_AND_DATA/mcell_1.mat')
 #mcell2 = mcell2["mcell_1"]
 
-theory2 = np.loadtxt('ReversibleBinding2D/Analytical_Rev2D_Aeq_RateEquationRiccati.txt')
+theory2 = np.loadtxt('ReversibleBinding2D/Analytical_Rev2D_Aeq_RateEquationRiccati.txt', skiprows = 1)
 
 ## load 2D-3D reversible ##
 ode3 = sio.loadmat('ReversibleMembraneRecruitment/GRAPH_AND_DATA/det1D.mat')
@@ -158,18 +158,18 @@ axins.set_xticklabels(['','', r'$5\cdot 10^{-1}$','' ,'','','', r'$10^0$'])
 
 ## plot 2D reversible ##
 ax[1].plot(ode2[:,0], ode2[:,1], '--', label='ODE')
-ax[1].plot(pde2[:,0], pde2[:,1], '-.', label = 'PDE')
-ax[1].plot(ssa2[:,0]*10**-6, ssa2[:,1], ':', label='Gillespie')
-ax[1].plot(smoldyn2[:,0], smoldyn2[:,1], linestyle=linestyles['densely dashed'], label='Smoldyn')
-ax[1].plot(fpr2[:,0]*10**-6, fpr2[:,1], label='FPR')
-ax[1].plot(mcell2[:,0], mcell2[:,1], linestyle=linestyles['dashdotdotted'], label= 'MCell')
-ax[1].plot(theory2[:,0]*1e-6, theory2[:,1], '--', label='theory', color = 'black')
+ax[1].plot(pde2[1:-1,0], pde2[1:-1,1], '-.', label = 'PDE')
+ax[1].plot(ssa2[:,0], ssa2[:,1], ':', label='Gillespie')
+ax[1].plot(smoldyn2[1:-1,0], smoldyn2[1:-1,1], linestyle=linestyles['densely dashed'], label='Smoldyn')
+ax[1].plot(fpr2[1:-1,0], fpr2[1:-1,1], label='FPR')
+ax[1].plot([], [], linestyle=linestyles['dashdotdotted'], label= 'MCell')
+ax[1].plot(theory2[:,0], theory2[:,1], '--', label='theory', color = 'black')
 ax[1].set_xscale('log')
 ax[1].set_xlim(1e-6, 5*1e0)
 ax[1].legend(loc=1, labelspacing = 0.3)
 ax[1].ticklabel_format(axis='y', style='plain', scilimits=(4,4), useOffset=None, useLocale=None, useMathText=None)
 ax[1].set_ylabel('A(t)');
-ax[1].text(1.5*1e-6, 880, r'$A + B \leftrightarrow C, 2D$');
+ax[1].text(1.5*1e-6, 800, r'$A + B \leftrightarrow C, 2D$');
 
 ## plot 2D-3D reversible ##
 ax[2].plot(ode3[:,0], ode3[:,1], '--', label='ODE')
