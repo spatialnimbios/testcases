@@ -73,23 +73,20 @@ mcell1 = np.loadtxt('ReversibleBinding3D/Ka1000/MCELL_A.Cube.dat')
 theory1 = np.loadtxt('ReversibleBinding3D/Ka1000/AnalyticalSolutionToRateEqn.txt', skiprows = 1)
 
 ## load 2D reversible ##
-ode2 = sio.loadmat('ReversibleBinding2D/GRAPH_AND_DATA/det1D_1.mat')
-ode2 = ode2["det1D_1"]
+ode2 = np.loadtxt('ReversibleBinding2D/ode_rev2d.txt')
 
-pde2 = sio.loadmat('ReversibleBinding2D/GRAPH_AND_DATA/det3D_1.mat')
-pde2 = pde2["det3D_1"]
+pde2 = np.loadtxt('ReversibleBinding2D/pde_rev2d.txt')
 
-ssa2 = np.loadtxt('ReversibleBinding2D/GRAPH_AND_DATA/gillespie_ka1_10trajavg.dat')
+ssa2 = np.loadtxt('ReversibleBinding2D/gillespie_mean_5trajs_rev2d.txt')
 
-smoldyn2 = np.loadtxt('ReversibleBinding2D/GRAPH_AND_DATA/smoldyn_ka1_10trajavg.dat')
+smoldyn2 = np.loadtxt('ReversibleBinding2D/Smoldyn1traj_rev2d.dat')
 
-fpr2 = np.loadtxt('ReversibleBinding2D/GRAPH_AND_DATA/fpr_1_traj50.dat')
+fpr2 = np.loadtxt('ReversibleBinding2D/FPR_mean5traj_rev2d.dat', skiprows = 1)
 
-mcell2 = sio.loadmat('ReversibleBinding2D/GRAPH_AND_DATA/mcell_1.mat')
-mcell2 = mcell2["mcell_1"]
+#mcell2 = sio.loadmat('ReversibleBinding2D/GRAPH_AND_DATA/mcell_1.mat')
+#mcell2 = mcell2["mcell_1"]
 
-theory2 = sio.loadmat('ReversibleBinding2D/GRAPH_AND_DATA/theory_1.mat')
-theory2 = theory2["theory_1"]
+theory2 = np.loadtxt('ReversibleBinding2D/Analytical_Rev2D_Aeq_RateEquationRiccati.txt')
 
 ## load 2D-3D reversible ##
 ode3 = sio.loadmat('ReversibleMembraneRecruitment/GRAPH_AND_DATA/det1D.mat')
