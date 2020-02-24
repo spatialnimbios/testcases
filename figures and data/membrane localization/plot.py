@@ -48,32 +48,29 @@ ssa_mem = np.loadtxt('Vcell/SSA_mem_loc large/SSA_MA_MB_large.txt', delimiter=',
 
 smoldyn_mem = np.loadtxt('Smoldyn_MA_MB_large.txt', delimiter=',')
 
-fpr_mem = np.loadtxt('Re__Data_etc_/IL_largeBox_Avgs.dat', skiprows=1)
+fpr_mem = np.loadtxt('Re__Data_etc_/Avg10trajAMandBM_FPR.txt')
 
 ## plot figure ##
 fig, ax = plt.subplots()
 ax.plot(ode_mem[:,0], ode_mem[:,4], '--', label='ODE')
 ax.plot(pde_mem[:,0], pde_mem[:,4], '-.', label = 'PDE')
+ax.plot(fpr_mem[:,0], fpr_mem[:,1], linestyle=linestyles['densely dashdotdotted'], label='FPR')
 ax.plot(ssa_mem[0,:], ssa_mem[1,:], ':', label='Gillespie')
 ax.plot(smoldyn_mem[:,0], smoldyn_mem[:,1], linestyle=linestyles['densely dashed'], label = 'Smoldyn')
-ax.plot(fpr_mem[:,0]*10**(-6), fpr_mem[:,3], label='FPR')
 plt.xlim(0, 2)
 plt.legend(loc=1, labelspacing = 0.3)
 plt.xlabel('time [s]');
 plt.ylabel('AM(t)');
 
 axins = ax.inset_axes([0.25, 0.6, 0.37, 0.37])
-axins.set_xlim(3, 3.5)
-axins.set_ylim(50, 70)
+axins.set_xlim(1.2, 1.75)
+axins.set_ylim(50, 65)
 ax.indicate_inset_zoom(axins)
 axins.plot(ode_mem[:,0], ode_mem[:,4], '--', label='ODE')
 axins.plot(pde_mem[:,0], pde_mem[:,4], '-.', label = 'PDE')
+axins.plot(fpr_mem[:,0], fpr_mem[:,1], linestyle=linestyles['densely dashdotdotted'], label='FPR')
 axins.plot(ssa_mem[0,:], ssa_mem[1,:], ':', label='Gillespie')
 axins.plot(smoldyn_mem[:,0], smoldyn_mem[:,1], linestyle=linestyles['densely dashed'], label = 'Smoldyn')
-axins.plot(fpr_mem[:,0]*10**(-6), fpr_mem[:,3], label='FPR')
-axins.set_xticks([3, 3.25, 3.5])
-#axins.set_xticks([], False)
-axins.set_xticklabels(['3.0','3.25','3.5'])
 
 plt.savefig("plot_membrane_location.pdf",bbox_inches='tight', dpi = 400)
 plt.savefig("plot_membrane_location.svg",bbox_inches='tight', dpi = 400)
