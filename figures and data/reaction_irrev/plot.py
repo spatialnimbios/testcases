@@ -229,8 +229,8 @@ ax[2].text(1.5*1e-6, 620, r'$A + B \rightarrow C, 3D-2D$');
 
 plt.gcf().set_size_inches(default_x, default_y)
 
-plt.savefig("PAPER_irrev_reactions.svg",bbox_inches='tight', dpi = 400)
-plt.savefig("PAPER_irrev_reactions.pdf",bbox_inches='tight', dpi = 400)
+#plt.savefig("irrev_reactions.svg",bbox_inches='tight', dpi = 400)
+#plt.savefig("irrev_reactions.pdf",bbox_inches='tight', dpi = 400)
 
 
 
