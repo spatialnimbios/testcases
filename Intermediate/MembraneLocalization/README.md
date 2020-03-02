@@ -24,6 +24,9 @@ MP1P2M: 0.2475
 Box: 0.47x0.47x0.752 um  
 Sphere: R=2.2854um
 
+SA: 0.2209
+V: 0.16611680
+
 # Reactions
 				
 | Reactions | k_a,FPR| k_on| k_b,FPR| k_off|
