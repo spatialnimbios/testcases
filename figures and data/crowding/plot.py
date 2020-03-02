@@ -48,12 +48,14 @@ fpr_crowding1 = np.loadtxt('kfitvals_vsC_vsSEM_FPR.dat', skiprows=0)
 
 
 fig, ax = plt.subplots()
-l2, caps2, c2 = ax.errorbar(fpr_crowding1[:,0], fpr_crowding1[:,1], fpr_crowding1[:,2], uplims= True, lolims= True, marker='o', label = "FPR")
-l, caps, c = ax.errorbar(egfre_crowding1[:,0], egfre_crowding1[:,1], egfre_crowding1[:,2], uplims= True, lolims= True, marker='o', label = "eGFRD")
+l2, caps2, c2 = ax.errorbar(fpr_crowding1[1:,0], fpr_crowding1[1:,1], fpr_crowding1[1:,2], uplims= True, lolims= True, marker='o', label = "FPR")
+l, caps, c = ax.errorbar(egfre_crowding1[1:,0], egfre_crowding1[1:,1], egfre_crowding1[1:,2], uplims= True, lolims= True, marker='o', label = "eGFRD")
 for cap in caps:
     cap.set_marker("_")
 for cap in caps2:
     cap.set_marker("_")
+ax.plot([-1, 1],[fpr_crowding1[0,1], fpr_crowding1[0,1]], color="black", linestyle = 'dashed')
+ax.set_xlim(0, 0.26)
 plt.legend(loc=0)
 plt.xlabel(r'Volume Fraction Occupied $\phi$');
 plt.ylabel(r'$k_{fit}=nm^3/\mu s$');
@@ -62,7 +64,7 @@ plt.savefig("crowding_C.svg",bbox_inches='tight', dpi = 400)
 plt.savefig("crowding_C.pdf",bbox_inches='tight', dpi = 400)
 
 
-
+#%%
 
 
 ########## Plot crowding 2 ##########
@@ -93,8 +95,8 @@ ax.legend(loc = 3, labelspacing = 0.3)
 plt.xlabel(r'time [$\mu s$]');
 plt.ylabel(r'A(t)');
 
-plt.savefig("crowding_C0.pdf",bbox_inches='tight', dpi = 400)
-plt.savefig("crowding_C0.svg",bbox_inches='tight', dpi = 400)
+#plt.savefig("crowding_C0.pdf",bbox_inches='tight', dpi = 400)
+#plt.savefig("crowding_C0.svg",bbox_inches='tight', dpi = 400)
 
 
 
@@ -128,5 +130,5 @@ ax.legend(loc = 0, labelspacing = 0.3)
 plt.xlabel(r'time [$\mu s$]');
 plt.ylabel(r'A(t)');
 
-plt.savefig("crowding_C25.svg",bbox_inches='tight', dpi = 400)
-plt.savefig("crowding_C25.pdf",bbox_inches='tight', dpi = 400)
+#plt.savefig("crowding_C25.svg",bbox_inches='tight', dpi = 400)
+#plt.savefig("crowding_C25.pdf",bbox_inches='tight', dpi = 400)
