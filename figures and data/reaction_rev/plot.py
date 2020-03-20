@@ -167,8 +167,8 @@ axins.set_xscale('log')
 
 plt.gcf().set_size_inches(default_x, default_y)
 
-plt.savefig("PAPER_rev_reactions.svg",bbox_inches='tight', dpi = 400)
-plt.savefig("PAPER_rev_reactions.pdf",bbox_inches='tight', dpi = 400)
+#plt.savefig("PAPER_rev_reactions.svg",bbox_inches='tight', dpi = 400)
+#plt.savefig("PAPER_rev_reactions.pdf",bbox_inches='tight', dpi = 400)
 
 
 
