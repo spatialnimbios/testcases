@@ -63,6 +63,7 @@ These were calculated in two ways.
 |2. Mcell  (1traj, 200s + zeropad to 5000s) FFT | 21.8s | 21.8s | 6.64ss | 
 |1. FPR (t traj, 9 peaks) | 23.9s (std:2.15) | 23.8s (std:2.5) | 5.9s (std:0.8) | 
 |2. FPR (1traj, 200s+zeropad to 5000s) FFT | 24.5s | 24.75s | 6.45s | 
+|3. FPR (1traj, 1000s+zeropad to 5000s) FFT | 24.3s | 24.3s | 6.45s | 
 
 
 
