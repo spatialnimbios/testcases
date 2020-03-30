@@ -1,43 +1,49 @@
 # Autophosphorylation model
 
-This is a simple model of an autophosphorylating kinase based on an early model of Lisman (1985). For these values of the rate parameters and initial species concentrations, the system is bistable up to just under S=0.010405. The system may be switched on with a short pulse of 20s duration with S=0.015, but shortening it to 15 s will lead to only transient activation of the system. 
+This is a simple model of an autophosphorylating kinase based on an early model of Lisman (1985). The parameters of the model, initial concentrations and rate parameters, have been chosen so that the system has two stable fixed points (Ap at steady state is 1.70 in the low state and 35.47 in the high state for the ODE version of the model). 
 
 ## Species
-The model has two molecular entities: a kinase, A, and a phosphatase, P. The model has two additional species: Aphos, the phosphorylated kinase, and P_Aphos, which is the kinase-phosphatase complex. 
+The model has two molecular entities: a kinase, A, and a phosphatase, P. The model has three additional species: Ap, the phosphorylated kinase, A_Ap, the complex between an unphosphorylated kinase and a phosphorylated kinase, and Ap_P, the complex between the phosphorylated kinase and the phosphatase. 
 
 ## Reactions
-(1) A undergoes spontaneous phosphorylation at a rate *S*:
+(1) Spontaneous phosphorylation of A:
 
-    A -> Aphos S
+    A -> Ap k1
 
-(2) A also undergoes autophosphorylation:
+(2) A binds Ap:
 
-    A + Aphos -> Aphos + Aphos k_Aphos
+    A + Ap -> A_Ap k2
 
-(3) P binds its substrate Aphos *reversibly*:
+(3) Catalytic conversion of A_Ap complex:
 
-    P + Aphos <-> P_Aphos k_f, k_r
+    A_Ap -> Ap + Ap k3
     
-(4) The P_Aphos complex gives rise to P and A:
+(4) Ap binds P:
 
-    P_Aphos -> P + A k_cat
+    Ap + P -> Ap_P k4
+    
+(5) Catalytic conversion of Ap_P complex:
+
+    Ap_P -> A + P k5
+ 
 
 ## Initial concentrations
 
 |Species| Concentration (molecules)  |
 |-------|-------------------|
-|   A   | 100               |
-|   P   |  10               |
+|   A   | 108               |
+|   P   |   9               |
 
 ## Rate parameters
 
 |Parameter| Value | Units   |
 |-------|---------|---------|
-|   S   |variable | 1/s  |
-| k_Aphos|  0.01  | µm<sup>3</sup>/s            |
-| k_f|  0.4 | µm<sup>3</sup>/s             |
-| k_r|  1.0 |1/s |
-| k_cat| 1.0 |1/s|
+|   k1  |2.12e-3 | 1/s  |
+|   k2  |1.00e3  | 1/M 1/s  |
+|   k3  |1.00e-2  |  1/s  |
+|   k4  |8.00e4  | 1/M 1/s  |
+|   k5  |5.39e-2  |  1/s  |
+
 
 ## Simulations
 
