@@ -90,9 +90,9 @@ pde3 = np.loadtxt('ReversibleMembraneRecruitment/PDE_rev3dto2d.txt')
 
 ssa3 = np.loadtxt('ReversibleMembraneRecruitment/gillespie_mean5traj_rev3dto2d.txt', skiprows = 1)
 
-smoldyn3 = np.loadtxt('ReversibleMembraneRecruitment/Smoldyn_avg4traj_dt1e-71e-8_rescaled.txt')
+smoldyn3 = np.loadtxt('ReversibleMembraneRecruitment/Smoldyn_avg6traj_dt1e-71e-81e-6_rescaled.txt')
 
-fpr3 = np.loadtxt('ReversibleMembraneRecruitment/FPR_mean4trajAlltimes_Rev3dto2d.txt', skiprows = 1)
+fpr3 = np.loadtxt('ReversibleMembraneRecruitment/FPRnerdss_avg10traj_ka500_kb250.txt', skiprows = 0)
 
 #%%
 
@@ -144,7 +144,7 @@ ax[1].text(1.5*1e-6, 50, r'$A + B \leftrightarrow C, 2D$');
 ## plot 2D-3D reversible ##
 ax[2].plot(ode3[:,0], ode3[:,1], '--', label='ODE', color = 'tab:blue')
 ax[2].plot(pde3[1:,0], pde3[1:,1], '-.', label = 'PDE', color = 'tab:green')
-ax[2].plot(fpr3[:,0], fpr3[:,1], linestyle=linestyles['densely dashdotdotted'], label='FPR', color = 'tab:red')
+ax[2].plot(fpr3[:,0]*1e-6, fpr3[:,1], linestyle=linestyles['densely dashdotdotted'], label='FPR', color = 'tab:red')
 ax[2].plot(ssa3[:,0], ssa3[:,1], ':', label='Gillespie', color = 'tab:purple')
 ax[2].plot(smoldyn3[:,0], smoldyn3[:,1], linestyle=linestyles['densely dashed'], label='Smoldyn', color = 'tab:orange')
 ax[2].set_xscale('log')
@@ -160,15 +160,15 @@ axins.set_ylim(0, 50)
 ax[2].indicate_inset_zoom(axins)
 axins.plot(ode3[:,0], ode3[:,1], '--', label='ODE', color = 'tab:blue')
 axins.plot(pde3[:,0], pde3[:,1], '-.', label = 'PDE', color = 'tab:green')
-axins.plot(fpr3[:,0], fpr3[:,1], linestyle=linestyles['densely dashdotdotted'], label='FPR', color = 'tab:red')
+axins.plot(fpr3[:,0]*1e-6, fpr3[:,1], linestyle=linestyles['densely dashdotdotted'], label='FPR', color = 'tab:red')
 axins.plot(ssa3[:,0], ssa3[:,1], ':', label='Gillespie', color = 'tab:purple')
 axins.plot(smoldyn3[:,0], smoldyn3[:,1], linestyle=linestyles['densely dashed'], label='Smoldyn', color = 'tab:orange')
 axins.set_xscale('log')
 
 plt.gcf().set_size_inches(default_x, default_y)
 
-#plt.savefig("PAPER_rev_reactions.svg",bbox_inches='tight', dpi = 400)
-#plt.savefig("PAPER_rev_reactions.pdf",bbox_inches='tight', dpi = 400)
+plt.savefig("PAPER_rev_reactions.svg",bbox_inches='tight', dpi = 400)
+plt.savefig("PAPER_rev_reactions.pdf",bbox_inches='tight', dpi = 400)
 
 
 
