@@ -41,6 +41,9 @@ Cube with volume 0.003 um^3
 ## Rate parameters
 
 Second set of values is for simulation 
+
+FOR SIMULATION BNGL FILE SHARED, ALL THESE RATES ARE MULTIPLIED BY 1E4.
+Also, kd in the bngl file is 2e-2, not 1e-2.
 |Parameter| Value | Units   | Value | Units
 |-------|---------|---------|---------|---------|
 |   k1  |2.12e-3 | 1/s  | 2.12e-3 | 1/s
@@ -51,7 +54,7 @@ Second set of values is for simulation
 
 
 ## Simulations
-
+Diffusion constant Re Jim: 100 um2/s for A and Phos.
 ## References
 
 Lisman, J E. (1985) “A Mechanism for Memory Storage Insensitive to Molecular 
