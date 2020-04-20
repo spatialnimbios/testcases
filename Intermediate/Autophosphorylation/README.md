@@ -43,12 +43,12 @@ Cube with volume 0.003 um^3
 Second set of values is for simulation 
 
 FOR SIMULATION BNGL FILE SHARED, ALL THESE RATES ARE MULTIPLIED BY 1E4.
-Also, kd in the bngl file is 2e-2, not 1e-2.
+
 |Parameter| Value | Units   | Value | Units
 |-------|---------|---------|---------|---------|
 |   k1  |2.12e-3 | 1/s  | 2.12e-3 | 1/s
 |   k2  |1.00e3  | 1/M 1/s  | 5.56e-4 | 1/molec 1/s
-|   k3  |1.00e-2  |  1/s  | 1.00e-2 | 1/s
+|   k3  |1.00e-2  |  1/s  | 2.00e-2 | 1/s
 |   k4  |8.00e4  | 1/M 1/s  | 4.44e-2 | 1/molec 1/s
 |   k5  |5.39e-2  |  1/s  |5.39e-2  |  1/s 
 
