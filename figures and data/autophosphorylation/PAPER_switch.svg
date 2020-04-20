@@ -287,14 +287,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="341.88412"
+     inkscape:cx="185.81269"
      inkscape:cy="367.62538"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
@@ -514,10 +514,10 @@
        y="178.55043"
        id="text7872"><tspan
          sodipodi:role="line"
-         id="tspan7870"
          x="99.489639"
          y="178.55043"
-         style="stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:round">phoshatase P</tspan></text>
+         style="stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:round"
+         id="tspan1193">phopshatase P</tspan></text>
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="axes_1"
@@ -1611,23 +1611,6 @@
        cx="24.671453"
        cy="150.86746"
        r="6" />
-    <path
-       sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.39215687"
-       id="path1211-2-0"
-       sodipodi:sides="5"
-       sodipodi:cx="27.812185"
-       sodipodi:cy="147.241"
-       sodipodi:r1="4.0643425"
-       sodipodi:r2="2.0321712"
-       sodipodi:arg1="0.95054684"
-       sodipodi:arg2="1.5788654"
-       inkscape:flatsided="false"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 30.174536,150.54829 -2.378748,-1.27519 -2.399017,1.23664 0.4777,-2.65638 -1.917445,-1.89946 2.673984,-0.36655 1.21397,-2.41056 1.174913,2.42984 2.66772,0.40965 -1.947848,1.86827 z"
-       inkscape:transform-center-x="-0.010133678"
-       inkscape:transform-center-y="-0.37845869" />
     <g
        id="g1281"
        transform="translate(21.686827,29.852246)"
@@ -1690,23 +1673,6 @@
        cx="74.409454"
        cy="129.28047"
        r="6" />
-    <path
-       sodipodi:type="star"
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.39215687"
-       id="path1211-2-0-2"
-       sodipodi:sides="5"
-       sodipodi:cx="77.550185"
-       sodipodi:cy="125.654"
-       sodipodi:r1="4.0643425"
-       sodipodi:r2="2.0321712"
-       sodipodi:arg1="0.95054684"
-       sodipodi:arg2="1.5788654"
-       inkscape:flatsided="false"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="m 79.912537,128.96129 -2.378748,-1.27519 -2.399017,1.23664 0.4777,-2.65638 -1.917445,-1.89946 2.673984,-0.36655 1.21397,-2.41056 1.174912,2.42984 2.667721,0.40965 -1.947848,1.86827 z"
-       inkscape:transform-center-x="-0.010133678"
-       inkscape:transform-center-y="-0.37845869" />
     <g
        id="g1281-9-3"
        transform="translate(59.245827,29.852246)"
