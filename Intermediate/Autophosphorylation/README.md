@@ -71,6 +71,18 @@ Diffusion constant  100 um2/s each for A and Phos.
 Switching occurs between low and high states in SSA and single-particle simulations. 
 Addition of reversible binding makes time spent in high state less, but otherwise similar switching results.
 
+To put data points in states, used copy numbers of Phosphatase and a simple cutoff. If Nphos < 6: put in state 2, else put in state 1. This works especially well for state 2, but is noisy for state 1. So prob of being in state 1 is likely underestimated . 
+From transition matrix, calculated times spent in each state using time_scales=-1./ diag (logm(ptrans)/lag_time)
+(ptrans=expm(K lag_time))
+where lag_time is the time between each pair of data points being used to construct the transition matrix. 
+Times are in Units of seconds. 
+
+|State. | Prob SSA      |   Prob NERDSS|. <time> SSA | <time> NERDSS |
+|-------|---------------|--------------|-------------|------------|
+|   1 Low   | 0.016 +-0.004 | 0.015.   | 5e-4 +-1e-5  | 5e-4
+|   2 High  | 0.984 +-0.004 | 0.985.   | 0.037 +-0.02 | 0.033
+
+
 ## References
 
 Lisman, J E. (1985) “A Mechanism for Memory Storage Insensitive to Molecular 
