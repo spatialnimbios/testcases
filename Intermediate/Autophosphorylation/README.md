@@ -35,27 +35,45 @@ Cube with volume 0.003 um^3
 
 |Species| Concentration (molecules)
 |-------|-------------------|
-|   A   | 108               |
+|   A   | 103
+|   Ap  |   5
 |   P   |   9               |
 
 ## Rate parameters
 
 Second set of values is for simulation 
 
-FOR SIMULATION BNGL FILE SHARED, ALL THESE RATES ARE MULTIPLIED BY 1E4.
 
 |Parameter| Value | Units   | Value | Units
 |-------|---------|---------|---------|---------|
-|   k1  |2.12e-3 | 1/s  | 2.12e-3 | 1/s
-|   k2  |1.00e3  | 1/M 1/s  | 5.56e-4 | 1/molec 1/s
-|   k3  |2.00e-2  |  1/s  | 2.00e-2 | 1/s
-|   k4  |8.00e4  | 1/M 1/s  | 4.44e-2 | 1/molec 1/s
-|   k5  |5.39e-2  |  1/s  |5.39e-2  |  1/s 
+|   k1  |2.12e1 | 1/s  | 2.12e1 | 1/s
+|   k2  |1.00e7  | 1/M 1/s  | 5.56 | 1/molec 1/s
+|   k3  |2.00e2  |  1/s  | 2.00e2 | 1/s
+|   k4  |8.00e8  | 1/M 1/s  | 4.44e2 | 1/molec 1/s
+|   k5  |5.39e2  |  1/s  |5.39e2  |  1/s 
 
+For single-particle Smoluchowski:
+Parameter| Value | Units   | Value | Units
+|-------|---------|---------|---------|---------|
+|   k1  |2.12e1 | 1/s  | 
+|   k2  |16.7  | nm3/us  | sigma: 1 nm, Dtot=200nm2/us
+|   k3  |2.00e2  |  1/s  | 
+|   k4  |2820  | nm3/us  | sigma: 1 nm, Dtot=200nm2/us
+|   k5  |5.39e2  |  1/s  |
+
+Note that in Agarwal et al, the binding reactions were also reversible, with rates 20/s for Rxn (2) and 10/s for Rxn (1). 
+The rates from Agarwal et al have all been increased by 1e4. 
 
 ## Simulations
-Diffusion constant Re Jim: 100 um2/s for A and Phos.
+Diffusion constant  100 um2/s each for A and Phos.
+
+## Results
+Switching occurs between low and high states in SSA and single-particle simulations. 
+Addition of reversible binding makes time spent in high state less, but otherwise similar switching results.
+
 ## References
 
 Lisman, J E. (1985) “A Mechanism for Memory Storage Insensitive to Molecular 
 Turnover: A Bistable Autophosphorylating Kinase.” *PNAS*, **82**, 3055–57.
+
+"On the precision of quasi steady state assumptions in stochastic dynamics", Agarwal et al J Chem Phys 2012: Thorsten got parameters from this paper. 
