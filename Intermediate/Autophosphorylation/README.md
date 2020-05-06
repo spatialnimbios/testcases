@@ -71,16 +71,17 @@ Diffusion constant  100 um2/s each for A and Phos.
 Switching occurs between low and high states in SSA and single-particle simulations. 
 Addition of reversible binding makes time spent in high state less, but otherwise similar switching results.
 
-To put data points in states, used copy numbers of Phosphatase and a simple cutoff. If Nphos < 6: put in state 2, else put in state 1. This works especially well for state 2, but is noisy for state 1. So prob of being in state 1 is likely underestimated . 
-From transition matrix, calculated times spent in each state using time_scales=-1./ diag (logm(ptrans)/lag_time)
-(ptrans=expm(K lag_time))
-where lag_time is the time between each pair of data points being used to construct the transition matrix. 
+To put data points in states, used copy numbers of Ap and A, and a simple 2D cutoff. If Ap < 20 AND A>50 put in state 1 (low), else put in state 2. This works well, also agrees well with an HMM. 
+Calculated intervals in states 1 and 2, and took averages of them, and Std of intervals ~200-300 intervals per 20s trajectory. 
+
+Stdev of state probabilities calculated from first 10s and second 10s analysis of NERDSS.
+
 Times are in Units of seconds. 
 
 |State. | Prob SSA      |   Prob NERDSS|. <time> SSA | <time> NERDSS |
 |-------|---------------|--------------|-------------|------------|
-|   1 Low   | 0.016 +-0.004 | 0.015.   | 5e-4 +-1e-5  | 5e-4
-|   2 High  | 0.984 +-0.004 | 0.985.   | 0.037 +-0.02 | 0.033
+|   1 Low   | 0.16  | 0.16+-0.02  | 0.008 +-0.1 | 0.008 +-0.05
+|   2 High  | 0.84  | 0.84+-0.02   | 0.06 +-0.3 | 0.04 +-0.19
 
 
 ## References
