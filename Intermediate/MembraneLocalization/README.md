@@ -21,11 +21,11 @@ P2P1M: 0.2488
 MP1P2M: 0.2475  
 
 # System Dimensions
-Box: 0.47x0.47x0.752 um  
-Sphere: R=2.2854um
+Box: 0.47x0.47x5 um  
+
 
 SA: 0.2209
-V: 0.16611680
+V: 1.1045
 
 # Reactions
 				
@@ -46,4 +46,4 @@ V: 0.16611680
 The relative SA to Volume is a critical parameter for determining the equilibrium populations. It also influences the kinetics, but for kinetics, results are also sensitive to the geometry--whether it is a box with a surface on one side, or a sphere surrounded by membrane.
 As thte distance to the membrane grows, the spatial models start to produce slower kinetics than well-mixed systems, particularly when the reaction with the surface is diffusion-limited (most collisions result in binding). 
 
-FPR, ODE, PDE, produce the same equilibrium. Smoldyn was slightly off-we will rerun with the new software.
+FPR, ODE, PDE, produce the same equilibrium. Smoldyn is off due to incorrect 2D reactions.
