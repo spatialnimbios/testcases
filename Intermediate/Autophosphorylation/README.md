@@ -78,7 +78,7 @@ Stdev of state probabilities calculated from first 10s and second 10s analysis o
 
 Times are in Units of seconds. 
 
-|State. | Prob SSA      |   Prob NERDSS|. <time> SSA | <time> NERDSS |
+|State. | Prob SSA      |   Prob NERDSS| <tau> SSA | <time> NERDSS |
 |-------|---------------|--------------|-------------|------------|
 |   1 Low   | 0.15+-0.02  | 0.16+-0.025 | 0.01 +-0.08 | 0.008 +-0.05
 |   2 High  | 0.85+-0.02  | 0.84+-0.025   | 0.06 +-0.3 | 0.04 +-0.19
