@@ -76,9 +76,9 @@ Calculated intervals in states 1 and 2, and took averages of them, and Std of in
 
 Stdev of state probabilities calculated from first 10s and second 10s analysis of NERDSS.
 
-Times are in Units of seconds. 
+Times are in Units of seconds. Last two columns are average residence times, labeled tau. 
 
-|State. | Prob SSA      |   Prob NERDSS| <tau> SSA | <time> NERDSS |
+|State. | Prob SSA      |   Prob NERDSS| tau SSA    | tau NERDSS |
 |-------|---------------|--------------|-------------|------------|
 |   1 Low   | 0.15+-0.02  | 0.16+-0.025 | 0.01 +-0.08 | 0.008 +-0.05
 |   2 High  | 0.85+-0.02  | 0.84+-0.025   | 0.06 +-0.3 | 0.04 +-0.19
