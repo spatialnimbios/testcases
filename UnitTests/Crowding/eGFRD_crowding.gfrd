@@ -1,0 +1,53 @@
+; eGFRD crowding simulation
+
+[Variables]
+Diff = 1E-11                            ; Diffusion constant (all particles) in m^2/s
+rad = 5E-10		; Radius for all particles in m
+box_length = (50E-9)/(10^(1/3))	; length of the box in m (50 nm)
+V = box_length^3		; Volume of the box in liter (m³) 
+N0 = 100		; Initial particle number
+seed = 2
+Nc = 0
+
+[Simulator]
+Seed = seed
+EndTime = 2E-5		; seconds
+MaintenanceStep = 10000
+MaintenanceFile = sim_state.dat
+
+[World]
+Matrix = 8
+Size = box_length		; length of the simulation box in m
+
+[SpeciesType]
+Name = A, B, C
+r = rad
+D = Diff
+
+[SpeciesType]
+Name = A-B
+r = rad
+D = 0
+
+[ReactionRule]
+Mode = Run
+Rule = A + B -> A-B
+k = 85E-21		; 85E-21 m³/s = 85 nm³/µs
+
+[ReactionRule]
+Mode = Run
+Rule = A-B -> B + C
+k = inf		; m³/s
+
+[Particles]
+A = N0
+B = N0
+C = round(Nc)
+
+[CopyNumbers]
+Interval = 1e-8
+File = copy_num.dat
+Type = Instantaneous
+
+[ReactionRecord]
+File = react_rec.dat
