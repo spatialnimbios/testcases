@@ -1,8 +1,8 @@
-# System Dimensions
+# System Dimensions  
 Box: 0.47x0.47x5 um  
 
-SA: 0.2209
-V: 1.1045
+SA: 0.2209  
+V: 1.1045  
 
 # Copy Numbers  
 P1: 1 uM  
@@ -24,7 +24,7 @@ P1M: 0.495
 P2M: 0.495  
 P1P2M: 0.2488  
 P2P1M: 0.2488  
-MP1P2M: 0.2475 
+MP1P2M: 0.2475  
 
 # Radius [nm] 
 P1:   
@@ -32,10 +32,10 @@ P2:
 M:   
 P1P2:   
 P1M:   
-P2M: 
-P1P2M: 
-P2P1M: 
-MP1P2M: 
+P2M:  
+P1P2M:  
+P2P1M:  
+MP1P2M:  
 
 # Reactions
 				
