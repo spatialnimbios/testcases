@@ -90,7 +90,7 @@ pde3 = np.loadtxt('ReversibleMembraneRecruitment/PDE_rev3dto2d.txt')
 
 ssa3 = np.loadtxt('ReversibleMembraneRecruitment/gillespie_mean5traj_rev3dto2d.txt', skiprows = 1)
 
-smoldyn3 = np.loadtxt('ReversibleMembraneRecruitment/Smoldyn_avg6traj_dt1e-71e-81e-6_rescaled.txt')
+smoldyn3 = np.loadtxt('ReversibleMembraneRecruitment/Smoldyn_Rev3Dto2D_start602_mean_sem_3traj1e-6.dat')
 
 fpr3 = np.loadtxt('ReversibleMembraneRecruitment/FPRnerdss_avg10traj_ka500_kb250.txt', skiprows = 0)
 
@@ -169,6 +169,7 @@ plt.gcf().set_size_inches(default_x, default_y)
 
 plt.savefig("PAPER_rev_reactions.svg",bbox_inches='tight', dpi = 400)
 plt.savefig("PAPER_rev_reactions.pdf",bbox_inches='tight', dpi = 400)
+plt.savefig("PAPER_rev_reactions.png",bbox_inches='tight', dpi = 400)
 
 
 

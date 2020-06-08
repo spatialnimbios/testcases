@@ -48,7 +48,7 @@ fpr_crowding1 = np.loadtxt('kfitvals_vsC_vsSEM_FPR.dat', skiprows=0)
 
 
 fig, ax = plt.subplots()
-l2, caps2, c2 = ax.errorbar(fpr_crowding1[1:,0], fpr_crowding1[1:,1], fpr_crowding1[1:,2], uplims= True, lolims= True, marker='o', label = "FPR")
+l2, caps2, c2 = ax.errorbar(fpr_crowding1[1:,0], fpr_crowding1[1:,1], fpr_crowding1[1:,2], uplims= True, lolims= True, marker='o', label = "NERDSS")
 l, caps, c = ax.errorbar(egfre_crowding1[1:,0], egfre_crowding1[1:,1], egfre_crowding1[1:,2], uplims= True, lolims= True, marker='o', label = "eGFRD")
 for cap in caps:
     cap.set_marker("_")
@@ -79,12 +79,12 @@ egfrd_fit = 100*np.exp(-100*64.88/12500*egfrd_crowding2[:,0]*1e6)
 
 fig, ax = plt.subplots()
 plt.plot([], [], ' ', label="Simulation")
-ax.plot(fpr_crowding2[:,0]*1e6, fpr_crowding2[:,1],label = "FPR", color='tab:blue')
+ax.plot(fpr_crowding2[:,0]*1e6, fpr_crowding2[:,1],label = "NERDSS", color='tab:blue')
 ax.plot(egfrd_crowding2[:,0]*1e6, egfrd_crowding2[:,1] ,label = "eGFRD", color='tab:orange')
 ax.fill_between(fpr_crowding2[:,0]*1e6, fpr_crowding2[:,1]+fpr_crowding2[:,2], fpr_crowding2[:,1]-fpr_crowding2[:,2], alpha=0.4)
 ax.fill_between(egfrd_crowding2[:,0]*1e6, egfrd_crowding2[:,1]+egfrd_crowding2[:,2], egfrd_crowding2[:,1]-egfrd_crowding2[:,2], alpha=0.4)
 plt.plot([], [], ' ', label="Fit")
-ax.plot(fpr_crowding2[:,0]*1e6, fpr_fit, linestyle=linestyles['dashed'], label = 'FPR', color='blue')
+ax.plot(fpr_crowding2[:,0]*1e6, fpr_fit, linestyle=linestyles['dashed'], label = 'NERDSS', color='blue')
 ax.plot(egfrd_crowding2[:,0]*1e6, egfrd_fit, linestyle=linestyles['densely dotted'], label = 'eGFRD', color = 'red')
 ax.text(4, 50, r'$\phi$ = 0.008', fontsize = 18)
 
@@ -95,8 +95,8 @@ ax.legend(loc = 3, labelspacing = 0.3)
 plt.xlabel(r'time [$\mu s$]');
 plt.ylabel(r'A(t)');
 
-#plt.savefig("crowding_C0.pdf",bbox_inches='tight', dpi = 400)
-#plt.savefig("crowding_C0.svg",bbox_inches='tight', dpi = 400)
+plt.savefig("crowding_C0.pdf",bbox_inches='tight', dpi = 400)
+plt.savefig("crowding_C0.svg",bbox_inches='tight', dpi = 400)
 
 
 
@@ -114,12 +114,12 @@ egfrd_fit = 100*np.exp(-100*87.3/12500*egfrd_crowding3[:,0]*1e6)
 
 fig, ax = plt.subplots()
 plt.plot([], [], ' ', label="Simulation")
-ax.plot(fpr_crowding3[:,0]*1e6, fpr_crowding3[:,1],label = "FPR", color='tab:blue')
+ax.plot(fpr_crowding3[:,0]*1e6, fpr_crowding3[:,1],label = "NERDSS", color='tab:blue')
 ax.plot(egfrd_crowding3[:,0]*1e6, egfrd_crowding3[:,1] ,label = "eGFRD", color='tab:orange')
 ax.fill_between(fpr_crowding3[:,0]*1e6, fpr_crowding3[:,1]+fpr_crowding3[:,2], fpr_crowding3[:,1]-fpr_crowding3[:,2], alpha=0.4)
 ax.fill_between(egfrd_crowding3[:,0]*1e6, egfrd_crowding3[:,1]+egfrd_crowding3[:,2], egfrd_crowding3[:,1]-egfrd_crowding3[:,2], alpha=0.4)
 plt.plot([], [], ' ', label="Fit")
-ax.plot(fpr_crowding3[:,0]*1e6, fpr_fit, linestyle=linestyles['dashed'], label = 'FPR', color='blue')
+ax.plot(fpr_crowding3[:,0]*1e6, fpr_fit, linestyle=linestyles['dashed'], label = 'NERDSS', color='blue')
 ax.plot(egfrd_crowding3[:,0]*1e6, egfrd_fit, linestyle=linestyles['densely dotted'], label = 'eGFRD', color = 'red')
 ax.text(4, 50, r'$\phi$ = 0.25', fontsize = 18)
 
@@ -130,5 +130,5 @@ ax.legend(loc = 0, labelspacing = 0.3)
 plt.xlabel(r'time [$\mu s$]');
 plt.ylabel(r'A(t)');
 
-#plt.savefig("crowding_C25.svg",bbox_inches='tight', dpi = 400)
-#plt.savefig("crowding_C25.pdf",bbox_inches='tight', dpi = 400)
+plt.savefig("crowding_C25.svg",bbox_inches='tight', dpi = 400)
+plt.savefig("crowding_C25.pdf",bbox_inches='tight', dpi = 400)
