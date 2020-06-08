@@ -1,18 +1,10 @@
 # Crowding influenced bimolecular association
 
-Experiment setting for eGFRD: 
-
-All simulations were performed in a box of the size (23.21nm)^3 = (50nm * 10^(-1/3))^3.
-The particles A, B and C have a radius of 0.5 nm and a diffusion coefficient of 10^-11 m^2/s. The first reaction rule is
-
-A+B -> A-B @ ki = 85*10^-21 m^3/s
-
-where ki is the intrinsic rate. A and B form the complex A-B (r = 0.5 nm, D = 0), since eGFRD only allows one product in a bimolecular reaction. Therefore, a second reaction rule is needed.
-
-A-B -> B + C @ ki = inf,
-
-where the rate ki is infinity (those are possible for first-order reactions), the complex A-B decays after a short time (it looks like A-B exists only for a few ns at most). The simulation starts with 100 A and 100 B particles. The number of C particles is chosen in a way, that A+B+C fill x % of the box (crowding factor). 
-
+# Copy Numbers  
+A: 100
+B: 100
+A-B: 0	(only in eGFRD)
+C: depends on the crowding factor.
 The tested crowding factors are;
 0.8% -> Nc = 0
 5%   -> Nc = 994
@@ -21,5 +13,26 @@ The tested crowding factors are;
 20%  -> Nc = 4575
 25%  -> Nc = 5768
 
-Experiment setting for NERDSS:
+# Diffusion Coefficients [µm²/s]  
+A: 10  
+B: 10 
+A-B: 0  (only in eGFRD)
+C: 10
 
+# Radius [nm]
+A: 0.5
+B: 0.5
+A-B: 0.5  (only in eGFRD)
+C: 0.5
+
+# System Dimensions
+Box: 23.21 * 23.21 * 23.21 nm^3
+V: 12500 nm^3
+
+# Reactions
+				
+| Reactions | k_a,FPR| k, eGFRD|
+| --- | --- | --- | --- | --- |
+| A + B -> C + B |    | --- | 
+| A + B -> A-B | --- | 85*10^-21 m^3/s |
+| A-B -> C + B | --- | $\infty$ |
