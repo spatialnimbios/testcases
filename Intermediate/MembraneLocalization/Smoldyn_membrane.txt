@@ -16,7 +16,7 @@ frame_thickness 0		# turns off display of the system boundaries
 dim 3					# 2D system
 boundaries x 0 0.47	r	# outermost system boundaries on x axis [µm]
 boundaries y 0 0.47	r	# outermost system boundaries on y axis [µm]
-boundaries z 0 0.752	r	# outermost system boundaries on z axis [µm]
+boundaries z 0 5	r	# outermost system boundaries on z axis [µm]
 
 
 time_start 0			# simulation starting time [s]
@@ -25,10 +25,10 @@ time_step 1e-7		# simulation time step [s]
 
 # Molecular species and their properties
 species P1 P2 M P1P2 P1M P2M P1P2M P2P1M MP1P2M		# species.
-difc P1(all) 0.5 	# diffusion coefficients [µm²/s]
-difc P2(all) 0.5
+difc P1(all) 50	# diffusion coefficients [µm²/s]
+difc P2(all) 50
 difc M(all) 0.5
-difc P1P2(all) 0.25
+difc P1P2(all) 25
 difc P1M(all) 0.495
 difc P2M(all) 0.495
 difc P1P2M(all) 0.2488
@@ -47,11 +47,11 @@ start_surface membrane						# start definition of surface
   color both 0 0 1 0.2						# surface color for graphical output
   thickness 1
   panel rect +2 0 0 0 0.47 0.47 rect1z		# definition of the surface panel
-  panel rect +2 0.47 0.47 0.752 -0.47 -0.47 rect2z		# definition of the surface panel
-  panel rect +1 0 0 0 0.47 0.752 rect1y		# definition of the surface panel
-  panel rect +1 0.47 0.47 0.752 -0.47 -0.752 rect2y		# definition of the surface panel
-  panel rect +0 0 0 0 0.47 0.752 rect1x		# definition of the surface panel
-  panel rect +0 0.47 0.47 0.752 -0.47 -0.752 rect2x		# definition of the surface panel
+  panel rect +2 0.47 0.47 5 -0.47 -0.47 rect2z		# definition of the surface panel
+  panel rect +1 0 0 0 0.47 5 rect1y		# definition of the surface panel
+  panel rect +1 0.47 0.47 5 -0.47 -5 rect2y		# definition of the surface panel
+  panel rect +0 0 0 0 0.47 5 rect1x		# definition of the surface panel
+  panel rect +0 0.47 0.47 5 -0.47 -5 rect2x		# definition of the surface panel
 end_surface
 
 # Compartment definitions
@@ -83,8 +83,8 @@ reaction r9 P1P2M(front) + M(front) <-> MP1P2M(front) 1.6611 1
 reaction r10 P2P1M(front) + M(front) <-> MP1P2M(front) 1.6611 1
 
 # Place molecules for initial condition
-compartment_mol 100 P1 box
-compartment_mol 100 P2 box
+compartment_mol 665 P1 box
+compartment_mol 665 P2 box
 surface_mol 3755 M(front) membrane rect rect1z
 
 # Output and other run-time commands
