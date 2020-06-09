@@ -1,4 +1,7 @@
 # Crowding influenced bimolecular association
+# System Dimensions  
+Box: 23.21 * 23.21 * 23.21 nm^3  
+V: 12500 nm^3  
 
 # Copy Numbers  
 A: 100  
@@ -24,10 +27,6 @@ A: 0.5
 B: 0.5  
 A-B: 0.5  (only in eGFRD)  
 C: 0.5  
-
-# System Dimensions  
-Box: 23.21 * 23.21 * 23.21 nm^3  
-V: 12500 nm^3  
 
 # Reactions
 				

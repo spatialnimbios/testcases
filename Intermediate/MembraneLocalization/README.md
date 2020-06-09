@@ -1,6 +1,5 @@
 # System Dimensions  
-Box: 0.47x0.47x5 um  
-
+Box: 0.47 * 0.47 * 5 um  
 SA: 0.2209  
 V: 1.1045  
 
