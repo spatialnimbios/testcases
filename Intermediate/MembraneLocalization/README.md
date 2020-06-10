@@ -1,3 +1,5 @@
+# Membrane localization model  
+
 # System Dimensions  
 Box: 0.47 * 0.47 * 5 um  
 SA: 0.2209  
@@ -24,17 +26,6 @@ BM: 0.495
 MAB: 0.2488  
 ABM: 0.2488  
 MABM: 0.2475  
-
-# Radius [nm] (only in NERDSS)
-A:   
-B:   
-M:   
-AB:   
-MA:   
-BM:  
-MAB:  
-ABM:  
-MABM:  
 
 # Reactions
 				
