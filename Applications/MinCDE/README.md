@@ -18,8 +18,7 @@ minDt-minE: 0.05
 MinE: 2.5  
 minDt: 0.05  
 
-# Reactions
-				
+# Reactions  
 | Reactions | k| 
 | --- | --- |
 | MinDT -> minDt | 0.025 um.s-1 |  

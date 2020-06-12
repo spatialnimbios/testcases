@@ -5,9 +5,9 @@ Bimolecular association in 2D. Equilibrium value should be correct for all metho
 Surface Area = 1 um^2  
 
 # Copy Numbers  
-A: 1000 molecule.  D: 1um^2/s  
-B: 1000 molecule.  D: 1um^2/s  
-C: 0 molecule.  D: 0.5um^2/s  
+A: 1000 molec  
+B: 1000 molec  
+C: 0 molec  
 
 # Diffusion Coefficients [µm²/s]  
 A: 1  
