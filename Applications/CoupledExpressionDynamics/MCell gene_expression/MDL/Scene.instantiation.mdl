@@ -1,0 +1,19 @@
+INSTANTIATE Scene OBJECT
+{
+  Cube OBJECT Cube {}
+  rel_PrmA RELEASE_SITE
+  {
+   SHAPE = Scene.Cube
+   MOLECULE = PrmA
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+  }
+  rel_PrmR RELEASE_SITE
+  {
+   SHAPE = Scene.Cube
+   MOLECULE = PrmR
+   NUMBER_TO_RELEASE = 1
+   RELEASE_PROBABILITY = 1
+  }
+}
+

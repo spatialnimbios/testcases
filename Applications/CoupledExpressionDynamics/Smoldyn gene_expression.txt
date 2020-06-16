@@ -1,0 +1,97 @@
+# gene expression model
+
+# Model parameters
+define TEXTOUTPUT		# uncomment this line for text output
+
+# Graphical output
+#graphics opengl_good		# level of graphics quality (or none)
+graphics none
+frame_thickness 0		# turns off display of the system boundaries
+
+# System space and time definitions
+dim 3					# 2D system
+boundaries x 0 2	r	# outermost system boundaries on x axis [µm]
+boundaries y 0 2	r	# outermost system boundaries on y axis [µm]
+boundaries z 0 2	r	# outermost system boundaries on z axis [µm]
+
+time_start 0			# simulation starting time [s]
+time_stop 1				# simulation stopping time [s]
+time_step 1e-7			# simulation time step [s]
+
+# species declarations
+max_species 10
+species A
+species C
+species mRNA_A_
+species mRNA_R
+species PrmA
+species PrmA_bound
+species PrmR
+species PrmR_bound
+species R
+
+# diffusion properties  [µm²/s]
+difc mRNA_R 10.0
+difc A 10.0
+difc R 10.0
+difc PrmA 10.0
+difc PrmR 10.0
+difc C 10.0
+difc PrmA_bound 10.0
+difc PrmR_bound 10.0
+difc mRNA_A_ 10.0
+
+start_surface membrane						# start definition of surface
+  action all both reflect					# all molecules reflect at both surface faces
+  color both 0 0 1 0.2						# surface color for graphical output
+  thickness 1								# surface display thickness for graphics
+  panel sphere 1 1 1 1 10 10 shp			# definition of the surface panel
+end_surface
+
+# Compartment definitions
+start_compartment cell	# the area within the circle is a compartment
+  surface membrane			# a surface that defines the compartment bounds
+  point 1 1 1				# a point that is within the compartment
+end_compartment
+
+# Chemical reactions
+reaction C_decay C -> R 1.0
+reaction A_decay A -> 0 1.0
+reaction mRNA_A_decay mRNA_A_ -> 0 10.0
+reaction mRNA_R_decay mRNA_R -> 0 0.5
+reaction AR_binding A + R -> C 2.0
+reaction R_decay R -> 0 0.2
+reaction A_trnscr PrmA -> mRNA_A_ + PrmA 50.0
+reaction active_A_trnscr PrmA_bound -> mRNA_A_ + PrmA_bound 500.0
+reaction R_trnsc PrmR -> mRNA_R + PrmR 0.01
+reaction active_R_trnsc PrmR_bound -> mRNA_R + PrmR_bound 50.0
+reaction PrmA_activation PrmA + A -> PrmA_bound 1
+reaction PrmA_activation_reverse PrmA_bound -> PrmA + A 50.0
+reaction PrmR_activation PrmR + A -> PrmR_bound 1
+reaction PrmR_activation_reverse PrmR_bound -> PrmR + A 100.0
+reaction R_trnsl mRNA_R -> R + mRNA_R 5.0
+reaction A_trnsl mRNA_A_ -> A + mRNA_A_ 50.0
+
+# molecules
+compartment_mol 1 PrmA cell
+compartment_mol 1 PrmR cell
+
+# Output and other run-time commands
+# the output file needs to be created before the simulation
+text_display time A R			# displays species counts to graphics
+ifdefine TEXTOUTPUT				# only run this if needed
+  output_files results\gene_model\A.txt results\gene_model\R.txt 		# file names for text output
+  cmd i 0 400 1e-1 molcountspecies A results\gene_model\A.txt
+  cmd i 0 400 1e-1 molcountspecies R results\gene_model\R.txt
+endif
+
+end_file			# end of this file
+
+
+
+
+
+
+
+
+
