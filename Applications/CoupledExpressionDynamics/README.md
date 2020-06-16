@@ -6,7 +6,8 @@ R = 1 um
 V = 4.19 um^3  
 
 Box (in MCell)  
-L = 1.612  
+L = 1.612 um
+V = 4.19 um^3  
 
 # Copy Numbers  
 mRNA_R: 0  
