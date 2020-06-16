@@ -14,7 +14,7 @@ A: 0
 R: 0  
 PrmA: 0.000397 uM = 1  
 PrmR: 0.000397 uM = 1  
-C: 0  
+AR: 0  
 PrmA_bound: 0  
 PrmR_bound: 0  
 mRNA_A:0   
@@ -25,7 +25,7 @@ A: 10
 R: 10  
 PrmA: 10  
 PrmR: 10  
-C: 10  
+AR: 10  
 PrmA_bound: 10  
 PrmR_bound: 10  
 mRNA_A: 10  
@@ -34,7 +34,7 @@ mRNA_A: 10
 				
 | Reactions | k_on | k_off |  
 | --- | --- | --- |  
-| A + R -> C  | 1204 uM-1s-1 | - |  
+| A + R -> AR  | 1204 uM-1s-1 | - |  
 | PrmA -> PrmA + mRNA_A | 50 s-1 | - |  
 | PrmA_bound -> PrmA_bound + mRNA_A | 500 s-1 | - |  
 | PrmR -> PrmR + mRNA_R | 0.01 s-1 | - |  
@@ -47,5 +47,5 @@ mRNA_A: 10
 | mRNA_R -> NULL | 0.5 s-1 | - |  
 | A -> NULL | 1 s-1 | - |
 | R -> NULL | 0.2 s-1 | - |
-| C -> R | 1 s-1 | - |
+| AR -> R | 1 s-1 | - |
   
