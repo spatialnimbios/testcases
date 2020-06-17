@@ -2,7 +2,9 @@
 adapted form Huang et al. PNAS 2006  
 
 # System Dimensions  
-Cylinder: r = 0.5 um, h = 4 um    
+Cylinder:  
+r = 0.5 um  
+h = 4 um  
 
 # Copy Numbers  
 MinDD: 0  
@@ -19,7 +21,7 @@ MinE: 2.5
 minDt: 0.05  
 
 # Reactions  
-| Reactions | k| 
+| Reactions | k | 
 | --- | --- |
 | MinDT -> minDt | 0.025 um.s-1 |  
 | MinDT + minDt -> 2minDt | 0.903s-1.uM-1 |  
