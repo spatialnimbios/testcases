@@ -7,6 +7,7 @@ V = 4.19 um3
 
 Box (in MCell)  
 L = 1.612 um  
+
 V = 4.19 um3
 
 # Copy Numbers  
@@ -26,7 +27,7 @@ A: 10
 R: 10  
 PrmA: 10  
 PrmR: 10  
-C: 10  
+AR: 10  
 PrmA_bound: 10  
 PrmR_bound: 10  
 mRNA_A: 10  
@@ -49,4 +50,3 @@ mRNA_A: 10
 | A -> NULL | 1 s-1 | 1 s-1 | - | - |  
 | R -> NULL | 0.2 s-1 | 0.2 s-1 | - | - |  
 | AR -> R | 1 s-1 | 1 s-1 | - | - |  
-  
