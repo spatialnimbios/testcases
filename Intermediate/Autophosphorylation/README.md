@@ -11,7 +11,7 @@ Ap: 5
 P: 9  
 
 # Diffusion Coefficients [µm²/s]  
-A: 100
+A: 100  
 Ap: 100  
 P: 100 
 
