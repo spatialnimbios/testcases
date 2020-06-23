@@ -7,7 +7,6 @@ V = 4.19 um3
 
 Box (in MCell)  
 L = 1.612 um  
-
 V = 4.19 um3
 
 # Copy Numbers  
