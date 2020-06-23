@@ -34,7 +34,7 @@ mRNA_A: 10
 # Reactions
 				
 | Reactions | k_on | k_a, FPR | k_off | k_off, FPR |  
-| --- | --- | --- | --- |  
+| --- | --- | --- | --- | --- |  
 | A + R -> AR  | 1204 uM-1s-1 | 356262.9 nm3/us | - |  -|  
 | PrmA -> PrmA + mRNA_A | 50 s-1 | 50 s-1 | - | - |  
 | PrmA_bound -> PrmA_bound + mRNA_A | 500 s-1 | 500 s-1 | - | - |  
