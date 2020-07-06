@@ -1,0 +1,62 @@
+begin parameters
+## Rate parameters
+  tscale 1e4
+  k1     2.12e-3*tscale
+  k2     5.56e-4*tscale
+  k3     2.00e-2*tscale
+  k4     4.44e-2*tscale
+  k5     5.39e-2*tscale
+
+  KT  108 # #/um^3
+  PT  9# #/um^3
+  Ap0 5
+end parameters
+begin compartments
+  CP 3 1
+end compartments
+
+## Species
+#The model has two molecular entities: a kinase, A, and a phosphatase, P. The m\
+#odel has two additional species:
+# Aphos, the phosphorylated kinase, and P_Aphos, which is the kinase-phosphatas\
+#e complex.
+
+begin molecule types
+  A()
+  Ap()
+  A_Ap()
+  P()
+  Ap_P()
+end molecule types
+
+#  Initial concentrations
+begin seed species
+#|Species| Concentration (molecules)  |
+   A@CP      KT-Ap0
+   Ap@CP     Ap0
+   P@CP      PT
+end seed species
+
+begin observables
+  Molecules Ap Ap()
+  Molecules Phos P()
+  Molecules Ap_P Ap_P()
+  Molecules Ptot P(),Ap_P()
+  Molecules Aun A()
+  Molecules AAdimer A_Ap()
+end observables
+
+begin reaction rules
+    A      -> Ap       k1
+    A + Ap -> A_Ap     k2
+    A_Ap   -> Ap + Ap  k3
+    Ap + P -> Ap_P     k4
+    Ap_P   -> A + P    k5
+end reaction rules
+
+## Simulations
+saveConcentrations()
+simulate({method=>"ssa",suffix=>"ssa_1e4",t_end=>200,n_steps=>2000000})
+
+
+    

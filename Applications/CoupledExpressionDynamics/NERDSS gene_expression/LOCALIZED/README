@@ -1,0 +1,10 @@
+
+
+to initialize the promoters to the center of the box volume, the simulation
+was run for 1 second, and then the coordinates were modified in the restart.inp.
+The promoters were placed at [30, 30, 30] and [-30, -30, -30]
+for D=2, they were placed at [50, 50, 50] and [-50, -50, -50]
+
+For D_A=5 and D_A=2, D_R=50um2/s, and D_RNA=5um2/s
+
+For D_A=10, all other species have D=10um2/s, except the promoters.

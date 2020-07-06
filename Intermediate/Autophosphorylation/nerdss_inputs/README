@@ -1,0 +1,10 @@
+modelA:
+
+Matches the model in the .bngl files, where tscale=1e4.
+
+
+modelB:
+
+Relative to modelA, all rates are reduced by a factor of 10.
+Thus must define new sets of microscopic rates.
+All microscopic rates listed in the excel sheet.

@@ -45,5 +45,5 @@ MABM: 0.2475
   
 The Smoldyn model was run 10 times in the stand alone Verion 2.61.  
 The Gillespie (N=10), ODE and PDE models were run in Vcell.  
-The NERDSS model was run x times in the stand alone Version.  
+The NERDSS model was run 10 times in the stand alone Version.  
 

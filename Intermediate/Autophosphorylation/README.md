@@ -24,3 +24,8 @@ P: 100
 | A_Ap -> Ap + Ap | 200 1/s | 200s-1 |  
 | Ap + P -> Ap_P | 800 uM-1s-1 | 2820 nm3/us |  
 | Ap_P -> A + P | 539 1/s | 539 s-1 |	 
+
+# Solvers
+
+ODE and SSA were run using RuleBender, with the included .bngl files.
+Single-particle reaction-diffusion was run with NERDSS.
