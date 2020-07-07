@@ -7,9 +7,9 @@ Molecules in solution can bind to molecules that are restricted to the 2D membra
 
 
 # Species and Diffusion Coefficients:
-A (3D)      30 nm^2.us-1
-B (2D)      1 nm^2.us-1
-C (3D)      0.97 nm^2.us-1
+| A | (3D) | 30 nm^2.us-1   |
+| B | (2D) |  1 nm^2.us-1   |
+| C | (2D) | 0.97 nm^2.us-1 |
 
 # Geometry:
 Rectangular Prism
