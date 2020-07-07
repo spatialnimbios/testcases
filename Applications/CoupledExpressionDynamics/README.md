@@ -1,4 +1,6 @@
-# Coupled Expression Dynamics
+# Coupled Expression Dynamics/ Circadian Clock Model 
+Original model published in:
+Vilar, J. M.G. et al, Mechanisms of noise-resistance in genetic oscillators. PNAS, 99:5988-5992 (2002)
 
 # System Dimensions  
 Sphere  
@@ -52,8 +54,19 @@ mRNA_A: 10
 
 
 #Model Modifications
+#Slower R decay
+In this model, one modification is made:
+For reaction R -> NULL, the rate is dropped from 0.2 s^-1 to 0.05 s^-1,
+causing oscillations to cease in the deterministic models.
+
+#Localized and Immobilized Gene Promoters
+In spatial models, we created a new model that localized the PrmA and PrmR at the cell center.
+For the PDE, this meant that they were uniformly distributed in a sphere of radius R=0.1um, at a concentration of 0.3964uM.
+Hence still a single molecule of each PrmA and PrmR. 
+The diffusion coefficients of Promoters (bound and unbound) in these localized models was always set to D_PRMA=0 and D_PRMR=0.
+
 
 For all variations to the model, including changes to D and localization of the Prm molecules, see:
 NERDSS gene_expression/ClockModel_NerdssParameters.xlsx
 
-
+The D_z component of promoters in NERDSS had to be set to 1E-8, so it was not treated as membrane bound.
