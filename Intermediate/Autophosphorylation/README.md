@@ -17,15 +17,18 @@ P: 100
 
 # Reactions
 				
-| Reactions | k_on| k_a, FPR |  
-| --- | --- | --- |  
-| A -> Ap | 21.2 s-1 | 21. s-1 |  
-| A + Ap -> A_Ap | 10 uM-1s-1 | 16.7 nm3/us |  
-| A_Ap -> Ap + Ap | 200 1/s | 200s-1 |  
-| Ap + P -> Ap_P | 800 uM-1s-1 | 2820 nm3/us |  
-| Ap_P -> A + P | 539 1/s | 539 s-1 |	 
+| Reactions | k_on| k_a, FPR |  sigma (nm)
+| --- | --- | --- |  --- | 
+| A -> Ap | 21.2 s-1 | same |  - |
+| A + Ap -> A_Ap | 10 uM-1s-1 | 16.7 nm3/us | 1 |  
+| A_Ap -> Ap + Ap | 200 1/s | same |  - |
+| Ap + P -> Ap_P | 800 uM-1s-1 | 2820 nm3/us | 1 |  
+| Ap_P -> A + P | 539 1/s | same | - |
 
 # Solvers
 
 ODE and SSA were run using RuleBender, with the included .bngl files.
 Single-particle reaction-diffusion was run with NERDSS.
+
+All model variations, including changes to D and both macroscopic and microscopic rates are included in the spreadsheet:
+nerdss_inputs/Autophos_nerdss_parameters.xlsx
