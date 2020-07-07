@@ -33,7 +33,7 @@ mRNA_A: 10
 
 # Reactions
 				
-| Reactions | k_on | k_a, FPR | k_off | k_off, FPR |  
+| Reactions | k_on | k_a, NERDSS | k_off | k_b, NERDSS |  
 | --- | --- | --- | --- | --- |  
 | A + R -> AR  | 1204 uM-1s-1 | 356262.9 nm3/us | - |  -|  
 | PrmA -> PrmA + mRNA_A | 50 s-1 | 50 s-1 | - | - |  
@@ -49,3 +49,11 @@ mRNA_A: 10
 | A -> NULL | 1 s-1 | 1 s-1 | - | - |  
 | R -> NULL | 0.2 s-1 | 0.2 s-1 | - | - |  
 | AR -> R | 1 s-1 | 1 s-1 | - | - |  
+
+
+#Model Modifications
+
+For all variations to the model, including changes to D and localization of the Prm molecules, see:
+NERDSS gene_expression/ClockModel_NerdssParameters.xlsx
+
+
