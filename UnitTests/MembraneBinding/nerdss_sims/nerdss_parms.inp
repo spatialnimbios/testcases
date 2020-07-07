@@ -1,0 +1,36 @@
+# Input file
+
+start parameters
+    nItr         = 1000000  #number of steps to take
+    timeStep     = 0.1     #in us
+    timeWrite    = 100     #print instantaneous properties
+    trajWrite    = 10000   #print coordinates
+    restartWrite = 100000  #print/overwrite restart file
+    checkPoint = 1000000   #store restart file
+end parameters
+
+start boundaries
+     WaterBox      = [2200.0,2200.0,206.61]
+     implicitLipid = false
+     xBCtype       = reflect
+     yBCtype       = reflect
+     zBCtype       = reflect
+end boundaries
+
+start molecules
+    A
+    LIP
+end molecules
+
+start reactions
+    ### A+B
+    A(a) + LIP(m) <-> A(a!1).LIP(m!1)
+    onRate  = 500.0  #ka in nm3/us: ~5E4M-1s-1 kon
+    offRate = 250.0  #kb in /s
+    sigma   = 1  #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    #lipids are normal to membrane plane, so M has theta value,
+    assocAngles = [nan, 1.5707963, nan, nan, 0]
+
+end reactions

@@ -16,8 +16,12 @@ C: 0.5
 
 # Reactions
 				
-| Reactions | k_on | k_a,NERDSS | k_off | k_a,NERDSS |  
-| --- | --- |--- | --- | --- |  
-| A+B <->C | 0.816 um^2/s | 0.816 s-1 | 1 um^2/s | 1 s-1 |  
+| Reactions | k_on | k_off | k_a,NERDSS | k_b,NERDSS| sigma   
+| --- | --- |--- | --- | --- |  --- |
+| A+B <->C | 3.07 um^2/s | 3.07  s-1 | 10 um^2/s | 10 s-1 | 1nm |  
 
-Equilibrium KD=1 um^-2.
+Equilibrium KD2D=1/um^2
+
+Equilibrium KD3D=KD2D/(2*sigma) = 0.83056uM
+
+Aeq=31.1267 . Reached at ~0.1s
