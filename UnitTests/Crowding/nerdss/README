@@ -1,0 +1,20 @@
+
+Crowding simulations were run with FPR custom code, which is NERDSS code with three modifications.
+
+1. Particles were initialized on a grid if N_C>0, due to the high density. Then this crystalline configuration had to be 'melted' into a disordered well-mixed configuration, before the simulation was properly initialized. During the melting period, all species continued to exclude volume, but no binding reactions occured. The length of the melting period was 0.1s. 
+
+2. When overlap was calculated to place particles that had not undergone reactions, but needed to exclude volume, the particles were assigned to clusters that contained all particles they might overlap with, and all the partners of those partners, etc. Then the positions of all particles in the cluster were updated to simultaneously ensure no overlap. If after a few tries, this failed, then 10 displacements were undergone, based on a time-step of dt/10. 
+
+3. Once an A+B reaction occurs, and an A molecule becomes a C molecule, the positions of these 2 reactants is not moved from the positions prior to the reaction. This is not a problem here, since they cannot undergo any subsequent binding reactions. Normally, the reactants are moved to a separation of r=sigma. 
+
+---------------------------------------
+for NERDSS input, note on the reaction A+B->C+B 
+this was modeled by giving 'A' two states. state A(a~p) can bind to B. State A(a~u) is equivalent to a C molecule. It does not bind anything, and excludes volume with all other molecules.
+
+
+----------------------------------------------------------------
+
+OUTPUTS: avg$Ntraj_crowdN100_clus_pairs$dt_set_C$NC_nA.dat
+where $dt is the size of the time step in us, and $NC is the crowding fraction of C at time zero.
+
+column 1 (time in sec) column2 (A copies) column3 (Standard Deviation of A copies at each time)

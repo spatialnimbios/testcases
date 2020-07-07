@@ -1,0 +1,11 @@
+#INPUTS: theta1 theta2 phi1 phi2 omega "NORM1" nx ny nz "NORM2" nx_2 ny_2 nz_2
+! ! ! ! ! NORM1 0 0 1 NORM2 0 0 1 #CLA-CLA
+! ! ! ! ! NORM1 0 0 1 NORM2 0 0 1 #CLA-CLA
+! ! ! ! ! NORM1 0 0 1 NORM2 0 0 1 #CLA-CLA
+! ! ! ! ! NORM1 0 0 1 NORM2 0 0 1 #CLA-CLA
+! ! ! ! ! NORM1 0 0 1 NORM2 0 0 1 #CLA-CLA
+! ! ! ! ! NORM1 0 0 1 NORM2 0 0 1 #CLA-CLA
+
+
+
+

@@ -1,0 +1,113 @@
+# Input file
+
+start parameters
+    nItr = 1000000 #number of steps to take
+    timeStep = 1e-5 #in us
+
+    timeWrite = 1000 #print instantaneous properties
+    trajWrite = 100000 #print coordinates
+    restartWrite = 100000 #print restart file
+    checkPoint = 5000000
+end parameters
+
+start boundaries
+     WaterBox = [23.2079442, 23.2079442, 23.2079442]
+     xBCtype = pbc
+     yBCtype = pbc
+     zBCtype = pbc
+end boundaries
+
+start molecules
+    A : 100 (a~P), 0 (a~U)
+    B : 100
+    C : 100
+end molecules
+
+start reactions
+    ### A+A reflect only!
+    A(a~P) + A(a~P) -> A(a~P!1).A(a~P!1)
+    onRate3Dka = 0.0  #ka in nm3/us
+    sigma = 1  #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    assocAngles = [nan,nan, nan, nan, nan]
+
+    ### A+B bimolecular assoc + state change. A(a~U) acts like C
+    B(b) + A(a~P) -> B(b) + A(a~U)
+    onRate3Dka = 85.0  #ka in nm3/us
+    sigma = 1  #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    assocAngles = [nan,nan, nan, nan, nan]
+
+
+
+    ### A'+A' reflect only!
+    A(a~U) + A(a~U) -> A(a~U!1).A(a~U!1)
+    onRate3Dka = 0.0  #ka in nm3/us
+    sigma = 1  #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    assocAngles = [nan,nan, nan, nan, nan]
+
+    ### A+A' reflect only!
+    A(a~P) + A(a~U) -> A(a~P!1).A(a~U!1)
+    onRate3Dka = 0.0  #ka in nm3/us
+    sigma = 1  #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    assocAngles = [nan,nan, nan, nan, nan]
+
+    ### A+C reflect only!
+    A(a~P) + C(c) -> A(a~P!1).C(c!1)
+    onRate3Dka = 0.0  #ka in nm3/us
+    sigma = 1  #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    assocAngles = [nan,nan, nan, nan, nan]
+
+    ### A'+C reflect only!
+    A(a~U) + C(c) -> A(a~U!1).C(c!1)
+    onRate3Dka = 0.0  #ka in nm3/us
+    sigma = 1  #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    assocAngles = [nan,nan, nan, nan, nan]
+
+    ### A'+B reflect only!
+    A(a~U) + B(b) -> A(a~U!1).B(b!1)
+    onRate3Dka = 0.0  #ka in nm3/us
+    sigma = 1  #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    assocAngles = [nan,nan, nan, nan, nan]
+
+
+    ### B+C reflect only!
+    B(b) + C(c) -> B(b!1).C(c!1)
+    onRate3Dka = 0.0 #ka in nm3/us
+    sigma = 1  #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    assocAngles = [nan,nan, nan, nan, nan]
+
+
+    ### B+B reflect only!
+    B(b) + B(b) -> B(b!1).B(b!1)
+    onRate3Dka = 0.0 #ka in nm3/us
+    sigma = 1  #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    assocAngles = [nan,nan, nan, nan, nan]
+
+
+    ### C+C reflect only!
+    C(c) + C(c) -> C(c!1).C(c!1)
+    onRate3Dka = 0.0 #ka in nm3/us
+    sigma = 1  #nm
+    norm1 = [0,0,1]
+    norm2 = [0,0,1]
+    assocAngles = [nan,nan, nan, nan, nan]
+
+
+end reactions

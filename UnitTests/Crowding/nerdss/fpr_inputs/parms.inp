@@ -1,0 +1,19 @@
+3 #NProtein Types: Number of Proteins
+3 #nmol: number of interfaces
+1e6 #Nit
+1e-5 #time step (us)
+6 #Nrxn
+9 #Nspecies
+1.0 #overlapSepLimit COM-COM (nm)
+23.2079442 #1200.00 #l: xsidelentgh in nm
+23.2079442 #1200.00 #l: ysidelentgh in nm
+23.2079442 #112.84 #l: zsidelentgh in nm
+1000 #statwrite: printout timestep
+100 #config write your coords
+100000 #gr write not used
+0 #restart
+-1 #clath type
+____MOLECULE INFO FILES____
+A.info
+B.info
+C.info
