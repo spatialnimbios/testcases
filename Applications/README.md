@@ -1,5 +1,5 @@
 # Applications  
-Well defined set of test problems.  
+Well studied set of test problems.  
 
-I. gene expression model  
+I. gene expression model / circadian clock 
 II. MinCDE model
