@@ -19,8 +19,10 @@ X,Y Side Length - 2.2 um
 Z Side Length - 0.207 um
 
 # Initial Conditions (Species, Concentration, Number of Molecules):
-A       1 uM                    602 molecules
-B       6045 molecules.um^2     29,258 molecules
+|specie| Conc | Copies |
+| --- | --- | ---|
+| A  |  1 uM  | 602 |
+| B  |  6045 um^-2 |  29,258 |
 
 # Reaction (Equation, Kf, Kr):
 A + B <-> C   
