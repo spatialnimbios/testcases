@@ -1,4 +1,4 @@
-# SpatialModelingWG
+# Spatial and Stochastic Modeling NIMBioS
 
 ## Unit Tests
 1. Reversible Binding
