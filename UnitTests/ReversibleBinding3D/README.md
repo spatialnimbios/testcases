@@ -16,9 +16,9 @@ B: 1
 C: 1  
 
 # Reactions
-| Reactions | k_on |  k_off | k_a,NERDSS | k_b,NERDSS |  
-| --- | --- |--- | --- | --- |  
-| A + B <-> C | 14.764 uM-1.s-1. | 0.02451 s-1 |1000nm^3/us |  1 s-1 |  
+| Reactions | k_on |  k_off | k_a,NERDSS | k_b,NERDSS | sigma | 
+| --- | --- |--- | --- | --- |  --- |
+| A + B <-> C | 14.764 uM-1.s-1. | 0.02451 s-1 |1000nm^3/us |  1 s-1 |  1nm |
 
 K_D = 1.6605 nM
 
