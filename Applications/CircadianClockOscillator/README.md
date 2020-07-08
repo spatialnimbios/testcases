@@ -1,4 +1,4 @@
-# Coupled Expression Dynamics/ Circadian Clock Model 
+# Circadian Clock Oscillator / coupled gene expression
 Original model published in:
 Vilar, J. M.G. et al, Mechanisms of noise-resistance in genetic oscillators. PNAS, 99:5988-5992 (2002)
 
