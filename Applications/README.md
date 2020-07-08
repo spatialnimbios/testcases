@@ -1,5 +1,5 @@
 # Applications  
-Well studied set of test problems.  
+Richer and more complex models of biological dynamics.  
 
-I. gene expression model / circadian clock 
+I. Circadian clock Oscillator 
 II. MinCDE model
