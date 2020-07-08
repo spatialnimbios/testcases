@@ -73,7 +73,7 @@ Note: the D_z component of promoters in NERDSS is set to 1E-8 rather than exactl
 
 # Time-step considerations
 For the single-particle simulations, the density of reactants limited the time-step to ~10us. However, the unimolecular reactions had such high rates that they also placed constraints on the time-step, particularly for slow Diffusion (Dtot=DA+DB). In NERDSS simulations, unimolecular reactions are evaluated as a population, so of N molecules that can react according to rate k1, m events are chosen, which is significantly more accurate than looping over all N molecules individually, particularly for large time-steps. However, the promoter unbinding in this model (rxn 6 and 7) has only N=1. For large time-steps then, the average number of events that occur is less than the theoretical value. 
-Error for N=1 can be quantified via <m>_sim / <m>_theory =exp(-k*dt). as exp(-k*dt)->1, the error goes to zero. 
+Error for N=1 can be quantified via avg_m_sim / avg_m_theory =exp(-kdeltat). As exp(-kdeltat)->1, the error goes to zero. 
 
 For original model, used dt=1 x10^-5 s.
 For localized promoters, used dt=5 x10^-7 s. 
