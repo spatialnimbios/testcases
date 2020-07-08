@@ -4,8 +4,8 @@
 1. Reversible Binding
     1. 2D
     2. 3D
-2. Reversible Membrane Binding (3D -> 2D)
-3. Crowding  
+    3. Membrane Binding (3D -> 2D)
+2. Crowding  
 
 ## Intermediate
 1. Autophosphorylation
