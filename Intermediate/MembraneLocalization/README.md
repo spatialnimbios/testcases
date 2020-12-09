@@ -24,8 +24,8 @@ M: 0.5
 AB: 25  
 MA: 0.495  
 BM: 0.495  
-MAB: 0.2488  
-ABM: 0.2488  
+MAB: 0.49  
+ABM: 0.49  
 MABM: 0.2475  
 
 # Reactions
